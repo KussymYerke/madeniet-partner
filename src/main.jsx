@@ -17,6 +17,8 @@ function attachHomeInteractions(root) {
   const cleanups = [];
 
   const header = root.querySelector(".home-header");
+  const burger = root.querySelector(".home-burger");
+  const homeNav = root.querySelector(".home-nav");
   const distributionButtons = Array.from(root.querySelectorAll("[data-distribution-btn]"));
   const distributionImage = root.querySelector("#distribution-image");
   const distributionTitle = root.querySelector("#distribution-title");
@@ -207,6 +209,18 @@ function attachHomeInteractions(root) {
     header.classList.toggle("is-compact", compact);
   }
 
+  function setMenuOpen(open) {
+    if (!header || !burger) return;
+    header.classList.toggle("is-menu-open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  }
+
+  function toggleMenu() {
+    if (!header) return;
+    setMenuOpen(!header.classList.contains("is-menu-open"));
+  }
+
   function updateDistribution(activeButton) {
     if (!activeButton || !distributionImage || !distributionTitle || !distributionText) return;
     distributionButtons.forEach((button) => button.classList.toggle("is-active", button === activeButton));
@@ -255,10 +269,19 @@ function attachHomeInteractions(root) {
   }
 
   root.querySelectorAll("[data-lang-btn]").forEach((btn) => {
-    const onClick = () => setLang(btn.getAttribute("data-lang-btn"));
+    const onClick = () => {
+      setLang(btn.getAttribute("data-lang-btn"));
+      setMenuOpen(false);
+    };
     btn.addEventListener("click", onClick);
     cleanups.push(() => btn.removeEventListener("click", onClick));
   });
+
+  if (burger) {
+    const onBurgerClick = () => toggleMenu();
+    burger.addEventListener("click", onBurgerClick);
+    cleanups.push(() => burger.removeEventListener("click", onBurgerClick));
+  }
 
   root.querySelectorAll('a[href^="#"]').forEach((a) => {
     const onClick = (e) => {
@@ -266,6 +289,7 @@ function attachHomeInteractions(root) {
       const target = root.querySelector(id);
       if (!target) return;
       e.preventDefault();
+      setMenuOpen(false);
       target.scrollIntoView({ behavior: "smooth", block: "start" });
     };
     a.addEventListener("click", onClick);

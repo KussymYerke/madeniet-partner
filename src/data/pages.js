@@ -19,6 +19,11 @@ export const partnersHtml = `
       <span>/</span>
       <button data-lang-btn="ru" type="button">ru</button>
     </div>
+
+    <button class="home-burger" type="button" aria-label="Open menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+    </button>
   </header>
 
   <main>
