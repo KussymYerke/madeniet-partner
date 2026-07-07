@@ -1,255 +1,319 @@
-export const partnersHtml = `<div style="background:#FFFFFF; color:#111111; font-family:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Helvetica Neue',Helvetica,Arial,sans-serif; width:100%; overflow-x:hidden;">\n\n  <!-- HEADER -->\n  <header id="top" style="display:flex; align-items:center; justify-content:space-between; max-width:1200px; margin:0 auto; padding:28px 24px; gap:24px; flex-wrap:wrap;">\n    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.02em; display:flex; gap:18px; flex-wrap:wrap;">\n      <a data-i18n="nav1" href="#about" style="color:#111; text-decoration:none;" style-hover="text-decoration:underline;">\u043e \u043d\u0430\u0441</a><span style="color:#888;">\u2014</span>\n      <a data-i18n="nav2" href="#formats" style="color:#111; text-decoration:none;" style-hover="text-decoration:underline;">\u043f\u0430\u0440\u0442\u043d\u0451\u0440\u0430\u043c</a><span style="color:#888;">\u2014</span>\n      <a data-i18n="nav3" href="#contacts" style="color:#111; text-decoration:none;" style-hover="text-decoration:underline;">\u043a\u043e\u043d\u0442\u0430\u043a\u0442\u044b</a>\n    </div>\n    <a href="#top" style="font-weight:900; font-size:20px; line-height:0.92; letter-spacing:-0.02em; color:#111; text-decoration:none;">\n      <div>made</div>\n      <div style="padding-left:18px;">niet</div>\n    </a>\n    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; display:flex; gap:8px;">\n      <span data-lang-btn="ru" style="cursor:pointer; color:#111;">ru</span>\n      <span style="color:#888;">/</span>\n      <span data-lang-btn="kz" style="cursor:pointer; color:#888;">kz</span>\n    </div>\n  </header>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 1 \u2014 HERO -->\n  <section style="max-width:1200px; margin:0 auto; padding:140px 24px 120px;">\n    <div data-i18n="heroKicker" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.03em; color:#888; text-transform:lowercase; margin-bottom:28px;">\n      madeniet \u2014 \u043f\u0435\u0447\u0430\u0442\u043d\u044b\u0439 \u0432\u044b\u043f\u0443\u0441\u043a \u21161\n    </div>\n    <h1 data-i18n="heroTitle" style="font-size:clamp(40px,7vw,96px); font-weight:900; letter-spacing:-0.03em; line-height:1.02; margin:0 0 32px;">\n      \u041f\u0435\u0440\u0432\u044b\u0439 \u043f\u0435\u0447\u0430\u0442\u043d\u044b\u0439 \u043d\u043e\u043c\u0435\u0440 Madeniet\n    </h1>\n    <p data-i18n="heroSub" style="font-size:clamp(18px,2vw,24px); font-weight:500; color:#111; max-width:760px; margin:0 0 20px; line-height:1.4;">\n      \u0421\u0435\u043d\u0442\u044f\u0431\u0440\u044c 2026. \u0421\u043e\u0432\u043c\u0435\u0441\u0442\u043d\u043e \u0441 Alem Comedy Fest \u2014 \u0434\u0432\u043e\u0439\u043d\u0430\u044f \u043e\u0431\u043b\u043e\u0436\u043a\u0430.\n    </p>\n    <div style="overflow:hidden; width:100%; margin-bottom:48px;">\n      <div style="display:flex; width:max-content; white-space:nowrap; animation:ticker 30s linear infinite;">\n        <span data-i18n="ticker" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.02em; color:#888; text-transform:lowercase; padding-right:24px;">\u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 / \u043a\u0438\u043d\u043e / \u043c\u0443\u0437\u044b\u043a\u0430 / \u043c\u043e\u0434\u0430 / \u0441\u0442\u0435\u043d\u0434\u0430\u043f / \u0430\u0440\u0445\u0438\u0432\u044b / \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 / \u043a\u0438\u043d\u043e / \u043c\u0443\u0437\u044b\u043a\u0430 / \u043c\u043e\u0434\u0430 / \u0441\u0442\u0435\u043d\u0434\u0430\u043f / \u0430\u0440\u0445\u0438\u0432\u044b /</span>\n        <span data-i18n="ticker" style="font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.02em; color:#888; text-transform:lowercase; padding-right:24px;">\u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 / \u043a\u0438\u043d\u043e / \u043c\u0443\u0437\u044b\u043a\u0430 / \u043c\u043e\u0434\u0430 / \u0441\u0442\u0435\u043d\u0434\u0430\u043f / \u0430\u0440\u0445\u0438\u0432\u044b / \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 / \u043a\u0438\u043d\u043e / \u043c\u0443\u0437\u044b\u043a\u0430 / \u043c\u043e\u0434\u0430 / \u0441\u0442\u0435\u043d\u0434\u0430\u043f / \u0430\u0440\u0445\u0438\u0432\u044b /</span>\n      </div>\n    </div>\n    <div style="display:flex; gap:16px; flex-wrap:wrap;">\n      <a data-i18n="btnFormats" href="#formats" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#111; text-decoration:none; border:1px solid #111; padding:14px 22px; display:inline-block; transition:background 0.15s, color 0.15s;" style-hover="background:#111; color:#fff;">\n        \u0424\u043e\u0440\u043c\u0430\u0442\u044b \u043f\u0430\u0440\u0442\u043d\u0451\u0440\u0441\u0442\u0432\u0430\n      </a>\n      <a data-i18n="btnContact" href="#contacts" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#888; text-decoration:none; border:1px solid #E5E5E5; padding:14px 22px; display:inline-block; transition:border-color 0.15s, color 0.15s;" style-hover="border-color:#111; color:#111;">\n        \u041d\u0430\u043f\u0438\u0441\u0430\u0442\u044c \u043d\u0430\u043c\n      </a>\n    </div>\n\n    <div style="margin-top:80px; width:100%; border-radius:28px; overflow:hidden; box-shadow:0 24px 80px rgba(0,0,0,.16); background:#F2F2F2;">
-      <img src="/assets/hero-cover.png" alt="Madeniet Magazine" style="width:100%; display:block; object-fit:cover;" />
-    </div>
-
-    <div style="margin-top:18px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap; font-family:'IBM Plex Mono',monospace; font-size:12px; color:#777;">
-      <span>Концептуальная обложка первого номера</span>
-      <span>September 2026</span>
-    </div>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 2 \u2014 \u041a\u0422\u041e \u041c\u042b -->\n  <section id="about" style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="whoTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 40px;">\u041a\u0442\u043e \u043c\u044b \u2014</h2>\n    <div style="max-width:760px;">\n      <p data-i18n="whoP1" style="font-size:20px; line-height:1.55; margin:0 0 20px;">\n        Madeniet \u2014 \u043c\u0435\u0434\u0438\u0430 \u043e \u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u043e\u0439 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0435 \u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d\u0430. \u041f\u0438\u0448\u0435\u043c \u043e \u043a\u0438\u043d\u043e, \u043c\u0443\u0437\u044b\u043a\u0435, \u043c\u043e\u0434\u0435, \u0441\u0442\u0435\u043d\u0434\u0430\u043f\u0435 \u0438 \u043d\u0430\u0441\u043b\u0435\u0434\u0438\u0438 \u043d\u0430 \u0440\u0443\u0441\u0441\u043a\u043e\u043c \u0438 \u043a\u0430\u0437\u0430\u0445\u0441\u043a\u043e\u043c \u2014 \u0434\u043b\u044f \u0432\u0441\u0435\u0439 \u0430\u0443\u0434\u0438\u0442\u043e\u0440\u0438\u0438 \u0441\u0442\u0440\u0430\u043d\u044b, \u0431\u0435\u0437 \u0434\u0435\u043b\u0435\u043d\u0438\u044f \u043d\u0430 \u00ab\u0441\u0432\u043e\u0438\u00bb \u0438 \u00ab\u0447\u0443\u0436\u0438\u0435\u00bb \u044f\u0437\u044b\u043a\u0438.\n      </p>\n      <p data-i18n="whoP2" style="font-size:20px; line-height:1.55; margin:0 0 32px;">\n        \u041c\u044b \u0434\u0435\u043b\u0430\u0435\u043c \u043e\u0442\u0435\u0447\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u0443\u044e \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0443 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u043e \u0441\u0442\u0438\u043b\u044c\u043d\u043e\u0439 \u0438 \u043f\u043e\u043d\u044f\u0442\u043d\u043e\u0439. \u0421\u0435\u0439\u0447\u0430\u0441 \u043f\u0435\u0440\u0435\u043d\u043e\u0441\u0438\u043c \u044d\u0442\u043e\u0442 \u043f\u043e\u0434\u0445\u043e\u0434 \u0432 \u043f\u0435\u0447\u0430\u0442\u044c.\n      </p>\n      <div data-i18n="whoFounder" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#111; margin-bottom:16px;">\n        \u043e\u0441\u043d\u043e\u0432\u0430\u0442\u0435\u043b\u044c \u0436\u0443\u0440\u043d\u0430\u043b\u0430 \u2014 \u0440\u0435\u0436\u0438\u0441\u0441\u0451\u0440 \u041a\u0443\u0430\u043d\u044b\u0448 \u0411\u0435\u0439\u0441\u0435\u043a\n      </div>\n      <div style="font-family:'IBM Plex Mono',monospace; font-size:13px;">\n        <a data-i18n="whoLink" href="https://madeniet.com/" target="_blank" style="color:#111; text-decoration:none;" style-hover="text-decoration:underline;">\u2192 \u043f\u043e\u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c, \u043a\u0430\u043a \u043c\u044b \u043f\u0438\u0448\u0435\u043c: madeniet.com</a>\n      </div>\n    </div>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 3 \u2014 \u0426\u0418\u0424\u0420\u042b -->\n  <section style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="numTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 12px;">\u0410\u0443\u0434\u0438\u0442\u043e\u0440\u0438\u044f \u0432 \u0446\u0438\u0444\u0440\u0430\u0445 \u2014</h2>\n    <div data-i18n="numNote" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-bottom:64px;">\n      instagram insights, 4 \u0438\u044e\u043d\u044f \u2013 4 \u0438\u044e\u043b\u044f 2026. \u0447\u0438\u0441\u0442\u0430\u044f \u043e\u0440\u0433\u0430\u043d\u0438\u043a\u0430, \u0431\u0435\u0437 \u0442\u0430\u0440\u0433\u0435\u0442\u0430.\n    </div>\n\n    <div ref="{{ statsRef }}" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(420px,1fr)); gap:72px 48px; margin-bottom:64px; align-items:end;">\n      <div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:clamp(48px,7.5vw,110px); line-height:0.95; letter-spacing:-0.02em; white-space:nowrap;" data-stat="2.85|m">2,85 \u043c\u043b\u043d</div>\n        <div data-i18n="statL1" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-top:12px;">\u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u043e\u0432 \u0437\u0430 30 \u0434\u043d\u0435\u0439</div>\n      </div>\n      <div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:clamp(48px,7.5vw,110px); line-height:0.95; letter-spacing:-0.02em; white-space:nowrap;" data-stat="1.27|m">1,27 \u043c\u043b\u043d</div>\n        <div data-i18n="statL2" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-top:12px;">\u043e\u0445\u0432\u0430\u0447\u0435\u043d\u043d\u044b\u0445 \u0430\u043a\u043a\u0430\u0443\u043d\u0442\u043e\u0432</div>\n      </div>\n      <div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:clamp(48px,7.5vw,110px); line-height:0.95; letter-spacing:-0.02em; white-space:nowrap;" data-stat="98|%">98%</div>\n        <div data-i18n="statL3" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-top:12px;">\u043e\u0440\u0433\u0430\u043d\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u0442\u0440\u0430\u0444\u0438\u043a</div>\n      </div>\n      <div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:clamp(48px,7.5vw,110px); line-height:0.95; letter-spacing:-0.02em; white-space:nowrap;" data-stat="589|k">589 \u0442\u044b\u0441.</div>\n        <div data-i18n="statL4" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-top:12px;">\u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u043e\u0432 \u0443 \u0442\u043e\u043f-\u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u0430 \u043c\u0435\u0441\u044f\u0446\u0430</div>\n      </div>\n    </div>\n\n    <div style="height:1px; background:#E5E5E5; width:100%; margin-bottom:32px;"></div>\n\n    <p data-i18n="numPara" style="font-size:18px; line-height:1.5; max-width:760px; margin:0 0 32px;">\n      234 108 \u0432\u0437\u0430\u0438\u043c\u043e\u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0439 \u0437\u0430 \u043c\u0435\u0441\u044f\u0446. 74% \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u043e\u0432 \u2014 \u043d\u043e\u0432\u0430\u044f \u0430\u0443\u0434\u0438\u0442\u043e\u0440\u0438\u044f: \u043c\u044b \u0440\u0430\u0441\u0442\u0451\u043c, \u0430 \u043d\u0435 \u043a\u0440\u0443\u0442\u0438\u043c\u0441\u044f \u0432 \u043e\u0434\u043d\u043e\u043c \u043f\u0443\u0437\u044b\u0440\u0435.\n    </p>\n\n    <div data-i18n="numCities" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase;">\n      \u0430\u043b\u043c\u0430\u0442\u044b 11,5% / \u0430\u0441\u0442\u0430\u043d\u0430 8,5% / \u0448\u044b\u043c\u043a\u0435\u043d\u0442 4,1% / \u0430\u043a\u0442\u0430\u0443 3,1%\n    </div>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 3.5 \u2014 \u0421\u0410\u041c\u041e\u0415 \u0427\u0418\u0422\u0410\u0415\u041c\u041e\u0415 -->\n  <section style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="topTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 12px;">\u0421\u0430\u043c\u043e\u0435 \u0447\u0438\u0442\u0430\u0435\u043c\u043e\u0435 \u0437\u0430 \u043c\u0435\u0441\u044f\u0446 \u2014</h2>\n    <div data-i18n="topNote" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-bottom:56px;">\n      \u0442\u043e\u043f-\u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b instagram, 4 \u0438\u044e\u043d\u044f \u2013 4 \u0438\u044e\u043b\u044f 2026. \u043a\u043b\u0438\u043a \u2014 \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u0435\u0442 \u043f\u043e\u0441\u0442.\n    </div>\n\n    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:24px;">
-      <a href="https://www.instagram.com/reel/DWEYmtqiEWE/?hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#111; display:block; transition:transform .25s ease;" style-hover="transform:translateY(-6px);">
-        <div style="position:relative; background:#F2F2F2; aspect-ratio:4/5; overflow:hidden; border-radius:14px; margin-bottom:16px;">
-          <img src="/assets/posts/post1.jpg" alt="Instagram post 1" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease;" />
-          <div style="position:absolute; top:12px; right:12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#fff; background:rgba(17,17,17,.72); padding:6px 9px; border-radius:999px;">REELS</div>
-        </div>
-        <div data-i18n="topNum1" style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:28px; letter-spacing:-0.02em; margin-bottom:8px;">589 тыс.</div>
-        <div data-i18n="topT1" style="font-size:16px; line-height:1.45; margin-bottom:8px;">История Казахстана</div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase;">instagram →</div>
-      </a>
-      <a href="https://www.instagram.com/reel/DY_ySE-MnZ2/?hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#111; display:block; transition:transform .25s ease;" style-hover="transform:translateY(-6px);">
-        <div style="position:relative; background:#F2F2F2; aspect-ratio:4/5; overflow:hidden; border-radius:14px; margin-bottom:16px;">
-          <img src="/assets/posts/post2.jpg" alt="Instagram post 2" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease;" />
-          <div style="position:absolute; top:12px; right:12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#fff; background:rgba(17,17,17,.72); padding:6px 9px; border-radius:999px;">REELS</div>
-        </div>
-        <div data-i18n="topNum2" style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:28px; letter-spacing:-0.02em; margin-bottom:8px;">157 тыс.</div>
-        <div data-i18n="topT2" style="font-size:16px; line-height:1.45; margin-bottom:8px;">Развлекательный / лайфстайл контент</div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase;">instagram →</div>
-      </a>
-      <a href="https://www.instagram.com/reel/DXyOnmcsHhs/?hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#111; display:block; transition:transform .25s ease;" style-hover="transform:translateY(-6px);">
-        <div style="position:relative; background:#F2F2F2; aspect-ratio:4/5; overflow:hidden; border-radius:14px; margin-bottom:16px;">
-          <img src="/assets/posts/post3.jpg" alt="Instagram post 3" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease;" />
-          <div style="position:absolute; top:12px; right:12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#fff; background:rgba(17,17,17,.72); padding:6px 9px; border-radius:999px;">REELS</div>
-        </div>
-        <div data-i18n="topNum3" style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:28px; letter-spacing:-0.02em; margin-bottom:8px;">156 тыс.</div>
-        <div data-i18n="topT3" style="font-size:16px; line-height:1.45; margin-bottom:8px;">Кино и сериальный контент</div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase;">instagram →</div>
-      </a>
-      <a href="https://www.instagram.com/reel/DXJo9g2jPo7/?hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration:none; color:#111; display:block; transition:transform .25s ease;" style-hover="transform:translateY(-6px);">
-        <div style="position:relative; background:#F2F2F2; aspect-ratio:4/5; overflow:hidden; border-radius:14px; margin-bottom:16px;">
-          <img src="/assets/posts/post4.jpg" alt="Instagram post 4" style="width:100%; height:100%; object-fit:cover; display:block; transition:transform .45s ease;" />
-          <div style="position:absolute; top:12px; right:12px; font-family:'IBM Plex Mono',monospace; font-size:11px; color:#fff; background:rgba(17,17,17,.72); padding:6px 9px; border-radius:999px;">REELS</div>
-        </div>
-        <div data-i18n="topNum4" style="font-family:'IBM Plex Mono',monospace; font-weight:600; font-size:28px; letter-spacing:-0.02em; margin-bottom:8px;">153 тыс.</div>
-        <div data-i18n="topT4" style="font-size:16px; line-height:1.45; margin-bottom:8px;">Pop-culture и Kazakhstan-core</div>
-        <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase;">instagram →</div>
-      </a>
-    </div>
-
-    <a data-i18n="topAll" href="https://instagram.com/mediamadeniet" target="_blank" rel="noopener noreferrer" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#111; margin-top:48px; display:inline-block; text-decoration:none;" style-hover="text-decoration:underline;">
-      → весь контент: instagram.com/mediamadeniet
-    </a>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 4 \u2014 ALEM COMEDY FEST -->\n  <section style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="alemTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 40px;">\u041f\u0430\u0440\u0442\u043d\u0451\u0440 \u043d\u043e\u043c\u0435\u0440\u0430 \u2014 Alem Comedy Fest</h2>\n    <div style="max-width:760px;">\n      <p data-i18n="alemP1" style="font-size:20px; line-height:1.55; margin:0 0 20px;">\n        \u041f\u0435\u0440\u0432\u044b\u0439 \u0432\u044b\u043f\u0443\u0441\u043a \u0432\u044b\u0445\u043e\u0434\u0438\u0442 \u0441\u043e\u0432\u043c\u0435\u0441\u0442\u043d\u043e \u0441 Alem Comedy Fest \u2014 \u0433\u043b\u0430\u0432\u043d\u044b\u043c \u043a\u043e\u043c\u0435\u0434\u0438\u0439\u043d\u044b\u043c \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u0435\u043c \u0441\u0442\u0440\u0430\u043d\u044b. \u0423 \u043d\u043e\u043c\u0435\u0440\u0430 \u0434\u0432\u043e\u0439\u043d\u0430\u044f \u043e\u0431\u043b\u043e\u0436\u043a\u0430: \u043e\u0434\u043d\u0430 \u0441\u0442\u043e\u0440\u043e\u043d\u0430 \u2014 Madeniet, \u0432\u0442\u043e\u0440\u0430\u044f \u2014 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044c.\n      </p>\n      <p data-i18n="alemP2" style="font-size:20px; line-height:1.55; margin:0 0 32px;">\n        \u0416\u0443\u0440\u043d\u0430\u043b \u0431\u0443\u0434\u0435\u0442 \u043f\u0440\u0435\u0434\u0441\u0442\u0430\u0432\u043b\u0435\u043d \u043d\u0430 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0430\u0445 \u0444\u0435\u0441\u0442\u0430 \u2014 \u0432 \u0440\u0443\u043a\u0430\u0445 \u0443 \u0442\u043e\u0439 \u0441\u0430\u043c\u043e\u0439 \u0430\u0443\u0434\u0438\u0442\u043e\u0440\u0438\u0438, \u0440\u0430\u0434\u0438 \u043a\u043e\u0442\u043e\u0440\u043e\u0439 \u0431\u0440\u0435\u043d\u0434\u044b \u0442\u0443\u0434\u0430 \u043f\u0440\u0438\u0445\u043e\u0434\u044f\u0442.\n      </p>\n      <div data-i18n="alemNote" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#888; text-transform:lowercase;">\n        [\u0434\u0430\u0442\u044b \u0438 \u0433\u043e\u0440\u043e\u0434 \u0444\u0435\u0441\u0442\u0430] \u00b7 [\u043e\u0445\u0432\u0430\u0442/\u043f\u043e\u0441\u0435\u0449\u0430\u0435\u043c\u043e\u0441\u0442\u044c \u0444\u0435\u0441\u0442\u0430, \u0435\u0441\u043b\u0438 \u0444\u0435\u0441\u0442 \u0440\u0430\u0437\u0440\u0435\u0448\u0438\u0442 \u0443\u043a\u0430\u0437\u0430\u0442\u044c]\n      </div>\n    </div>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 5 \u2014 \u0422\u0415\u041c\u042b \u041d\u041e\u041c\u0415\u0420\u0410 -->\n  <section style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="insideTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 24px;">\u0427\u0442\u043e \u0432\u043d\u0443\u0442\u0440\u0438 \u2014</h2>\n    <p data-i18n="insideIntro" style="font-size:20px; line-height:1.55; max-width:760px; margin:0 0 64px;">\n      \u041d\u043e\u043c\u0435\u0440 \u0441\u043e\u0431\u0440\u0430\u043d \u0432\u043e\u043a\u0440\u0443\u0433 \u0431\u043e\u043b\u044c\u0448\u0438\u0445 \u0440\u0435\u0434\u0430\u043a\u0446\u0438\u043e\u043d\u043d\u044b\u0445 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u043e\u0432. \u041f\u0430\u0440\u0442\u043d\u0451\u0440 \u0432\u0441\u0442\u0440\u0430\u0438\u0432\u0430\u0435\u0442\u0441\u044f \u043d\u0435 \u00ab\u0440\u044f\u0434\u043e\u043c \u0441 \u043a\u043e\u043d\u0442\u0435\u043d\u0442\u043e\u043c\u00bb, \u0430 \u0432\u043d\u0443\u0442\u0440\u044c \u043d\u0435\u0433\u043e.\n    </p>\n\n    <div style="display:flex; flex-direction:column;">\n      <div style="display:grid; grid-template-columns:80px 1fr; gap:24px; padding:32px 0; border-top:1px solid #E5E5E5;">\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#888;">01</div>\n        <div>\n          <div data-i18n="in1t" style="font-weight:700; font-size:22px; margin-bottom:10px;">\u0414\u0432\u043e\u0439\u043d\u0430\u044f \u043e\u0431\u043b\u043e\u0436\u043a\u0430 \u00d7 Alem Comedy Fest</div>\n          <div data-i18n="in1d" style="font-size:17px; color:#111; line-height:1.5; max-width:640px;">\u041a\u043e\u043c\u0435\u0434\u0438\u044f \u043a\u0430\u043a \u043d\u043e\u0432\u0430\u044f \u043a\u0430\u0437\u0430\u0445\u0441\u043a\u0430\u044f \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0430. \u0413\u0435\u0440\u043e\u0438 \u0444\u0435\u0441\u0442\u0430, \u0437\u0430\u043a\u0443\u043b\u0438\u0441\u044c\u0435, \u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u0440\u0430\u0437\u0433\u043e\u0432\u043e\u0440 \u043e \u0436\u0430\u043d\u0440\u0435.</div>\n        </div>\n      </div>\n      <div style="display:grid; grid-template-columns:80px 1fr; gap:24px; padding:32px 0; border-top:1px solid #E5E5E5;">\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#888;">02</div>\n        <div>\n          <div data-i18n="dimT" style="font-weight:700; font-size:22px; margin-bottom:10px;">\u0414\u0438\u043c\u0430\u0448 \u041a\u0443\u0434\u0430\u0439\u0431\u0435\u0440\u0433\u0435\u043d</div>\n          <div data-i18n="dimD" style="font-size:17px; color:#111; line-height:1.5; max-width:640px;">\u0411\u043e\u043b\u044c\u0448\u043e\u0439 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b \u043e \u0414\u0438\u043c\u0430\u0448\u0435 \u041a\u0443\u0434\u0430\u0439\u0431\u0435\u0440\u0433\u0435\u043d\u0435. <span style="color:#888;">[\u0444\u043e\u0440\u043c\u0430\u0442 \u0438 \u0444\u043e\u043a\u0443\u0441 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u0430 \u2014 \u0443\u0442\u043e\u0447\u043d\u0438\u0442\u044c]</span></div>\n        </div>\n      </div>\n      <div style="display:grid; grid-template-columns:80px 1fr; gap:24px; padding:32px 0; border-top:1px solid #E5E5E5;">\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#888;">03</div>\n        <div>\n          <div data-i18n="in2t" style="font-weight:700; font-size:22px; margin-bottom:10px;">\u0410\u0440\u0445\u0438\u0432\u044b</div>\n          <div data-i18n="in2d" style="font-size:17px; color:#111; line-height:1.5; max-width:640px;">\u041d\u0430\u0448\u0430 \u0441\u0430\u043c\u0430\u044f \u0447\u0438\u0442\u0430\u0435\u043c\u0430\u044f \u0440\u0443\u0431\u0440\u0438\u043a\u0430 \u0432 \u0434\u0438\u0434\u0436\u0438\u0442\u0430\u043b\u0435 \u2014 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043e\u0431 \u0438\u0441\u0442\u043e\u0440\u0438\u0438 \u0438 \u043d\u0430\u0441\u043b\u0435\u0434\u0438\u0438 \u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d\u0430 \u2014 \u0432\u043f\u0435\u0440\u0432\u044b\u0435 \u043d\u0430 \u0431\u0443\u043c\u0430\u0433\u0435.</div>\n        </div>\n      </div>\n      <div style="display:grid; grid-template-columns:80px 1fr; gap:24px; padding:32px 0; border-top:1px solid #E5E5E5;">\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#888;">04</div>\n        <div>\n          <div data-i18n="in5t" style="font-weight:700; font-size:22px; margin-bottom:10px;">\u00ab7 \u049b\u0430\u0440\u0430\u049b\u0448\u044b\u00bb \u2014 \u043f\u0440\u0435\u043c\u044c\u0435\u0440\u0430</div>\n          <div data-i18n="in5d" style="font-size:17px; color:#111; line-height:1.5; max-width:640px;">\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b \u043e \u0444\u0438\u043b\u044c\u043c\u0435 \u041a\u0443\u0430\u043d\u044b\u0448\u0430 \u0411\u0435\u0439\u0441\u0435\u043a\u0430 \u00ab7 \u049b\u0430\u0440\u0430\u049b\u0448\u044b\u00bb \u0438 \u043b\u044e\u0434\u044f\u0445, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0435\u0433\u043e \u0441\u0434\u0435\u043b\u0430\u043b\u0438.</div>\n        </div>\n      </div>\n      <div style="display:grid; grid-template-columns:80px 1fr; gap:24px; padding:32px 0; border-top:1px solid #E5E5E5;">\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#888;">05</div>\n        <div>\n          <div data-i18n="in3t" style="font-weight:700; font-size:22px; margin-bottom:10px;">\u0420\u0430\u0431\u043e\u0447\u0438\u0439 \u0441\u0442\u043e\u043b</div>\n          <div data-i18n="in3d" style="font-size:17px; color:#111; line-height:1.5; max-width:640px;">8\u201310 \u0436\u0435\u043d\u0449\u0438\u043d, \u043a\u043e\u0442\u043e\u0440\u044b\u0435 \u0434\u0435\u043b\u0430\u044e\u0442 \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u043d\u0443\u044e \u0438\u043d\u0434\u0443\u0441\u0442\u0440\u0438\u044e \u0441\u0442\u0440\u0430\u043d\u044b: \u0438\u0445 \u0440\u0430\u0431\u043e\u0447\u0438\u0435 \u043c\u0435\u0441\u0442\u0430, \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442\u044b \u0438 \u043f\u0443\u0442\u044c. \u041f\u043e\u0440\u0442\u0440\u0435\u0442\u043d\u0430\u044f \u0441\u044a\u0451\u043c\u043a\u0430 + \u0438\u043d\u0442\u0435\u0440\u0432\u044c\u044e.</div>\n        </div>\n      </div>\n      <div style="display:grid; grid-template-columns:80px 1fr; gap:24px; padding:32px 0; border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5;">\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#888;">06</div>\n        <div>\n          <div data-i18n="in4t" style="font-weight:700; font-size:22px; margin-bottom:10px;">\u041a\u0443\u043b\u044c\u0442\u0443\u0440\u0430 \u0447\u0435\u0440\u0435\u0437 50 \u043b\u0435\u0442</div>\n          <div data-i18n="in4d" style="font-size:17px; color:#111; line-height:1.5; max-width:640px;">20 \u0433\u0435\u0440\u043e\u0435\u0432 \u2014 \u0440\u0435\u0436\u0438\u0441\u0441\u0451\u0440\u044b, \u043c\u0443\u0437\u044b\u043a\u0430\u043d\u0442\u044b, \u0445\u0443\u0434\u043e\u0436\u043d\u0438\u043a\u0438, \u043f\u0440\u0435\u0434\u043f\u0440\u0438\u043d\u0438\u043c\u0430\u0442\u0435\u043b\u0438 \u2014 \u043e \u0442\u043e\u043c, \u043a\u0430\u043a\u043e\u0439 \u043e\u043d\u0438 \u0432\u0438\u0434\u044f\u0442 \u043a\u0430\u0437\u0430\u0445\u0441\u043a\u0443\u044e \u043a\u0443\u043b\u044c\u0442\u0443\u0440\u0443 \u0432 2076 \u0433\u043e\u0434\u0443.</div>\n        </div>\n      </div>\n    </div>\n\n    <div data-i18n="insidePh" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-top:24px; font-style:italic;">\n      [\u0435\u0441\u043b\u0438 \u0435\u0441\u0442\u044c \u0435\u0449\u0451 1\u20132 \u043f\u043e\u0434\u0442\u0432\u0435\u0440\u0436\u0434\u0451\u043d\u043d\u044b\u0435 \u0440\u0443\u0431\u0440\u0438\u043a\u0438 \u2014 \u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c. \u043f\u044f\u0442\u044c \u2014 \u0445\u043e\u0440\u043e\u0448\u0438\u0439 \u043c\u0438\u043d\u0438\u043c\u0443\u043c]\n    </div>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 6 \u2014 \u0422\u0418\u0420\u0410\u0416 \u0418 \u0414\u0418\u0421\u0422\u0420\u0418\u0411\u0423\u0426\u0418\u042f -->\n  <section style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="fmtTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 64px;">\u0424\u043e\u0440\u043c\u0430\u0442 \u2014</h2>\n\n    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:48px; margin-bottom:56px;">\n      <div>\n        <div data-i18n="fmtL1" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-bottom:14px;">\u0442\u0438\u0440\u0430\u0436</div>\n        <div data-i18n="fmtV1" style="font-size:32px; font-weight:700; letter-spacing:-0.02em; color:#888;">[X 000 \u044d\u043a\u0437.]</div>\n      </div>\n      <div>\n        <div data-i18n="fmtL2" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-bottom:14px;">\u0432\u044b\u0445\u043e\u0434</div>\n        <div data-i18n="fmtV2" style="font-size:32px; font-weight:700; letter-spacing:-0.02em;">\u0441\u0435\u043d\u0442\u044f\u0431\u0440\u044c 2026</div>\n      </div>\n      <div>\n        <div data-i18n="fmtL3" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-bottom:14px;">\u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0446\u0438\u044f</div>\n        <div data-i18n="fmtV3" style="font-size:32px; font-weight:700; letter-spacing:-0.02em; color:#888;">Alem Comedy Fest, [\u043a\u043e\u0444\u0435\u0439\u043d\u0438 / \u043a\u043e\u043d\u0446\u0435\u043f\u0442-\u0441\u0442\u043e\u0440\u044b / \u0438\u0432\u0435\u043d\u0442\u044b]</div>\n      </div>\n    </div>\n\n    <div style="height:1px; background:#E5E5E5; width:100%; margin-bottom:32px;"></div>\n\n    <p data-i18n="fmtPara" style="font-size:18px; line-height:1.55; max-width:760px; margin:0;">\n      \u041f\u0435\u0447\u0430\u0442\u043d\u044b\u0439 \u043d\u043e\u043c\u0435\u0440 \u0436\u0438\u0432\u0451\u0442 \u0434\u043e\u043b\u044c\u0448\u0435 \u043f\u043e\u0441\u0442\u0430: \u0435\u0433\u043e \u043b\u0438\u0441\u0442\u0430\u044e\u0442, \u043e\u0441\u0442\u0430\u0432\u043b\u044f\u044e\u0442 \u043d\u0430 \u0441\u0442\u043e\u043b\u0430\u0445, \u043f\u0435\u0440\u0435\u0434\u0430\u044e\u0442 \u0438\u0437 \u0440\u0443\u043a \u0432 \u0440\u0443\u043a\u0438. \u041f\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0432 \u043f\u0435\u0440\u0432\u043e\u043c \u0432\u044b\u043f\u0443\u0441\u043a\u0435 \u2014 \u044d\u0442\u043e \u043f\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u0432 \u0432\u0435\u0449\u0438, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u0441\u043e\u0445\u0440\u0430\u043d\u044f\u0442.\n    </p>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 7 \u2014 \u0424\u041e\u0420\u041c\u0410\u0422\u042b \u041f\u0410\u0420\u0422\u041d\u0401\u0420\u0421\u0422\u0412\u0410 -->\n  <section id="formats" style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="partTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 24px;">\u0424\u043e\u0440\u043c\u0430\u0442\u044b \u043f\u0430\u0440\u0442\u043d\u0451\u0440\u0441\u0442\u0432\u0430 \u2014</h2>\n    <p data-i18n="partIntro" style="font-size:20px; line-height:1.55; max-width:760px; margin:0 0 64px;">\n      \u041c\u044b \u043d\u0435 \u043f\u0440\u043e\u0434\u0430\u0451\u043c \u0440\u0435\u043a\u043b\u0430\u043c\u043d\u044b\u0435 \u043f\u043e\u043b\u043e\u0441\u044b \u043f\u043e \u043f\u0440\u0430\u0439\u0441\u0443. \u041c\u044b \u0441\u043e\u0431\u0438\u0440\u0430\u0435\u043c \u043f\u0430\u043a\u0435\u0442 \u043f\u043e\u0434 \u0437\u0430\u0434\u0430\u0447\u0438 \u0431\u0440\u0435\u043d\u0434\u0430 \u2014 \u0438\u0437 \u044d\u0442\u0438\u0445 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u043e\u0432:\n    </p>\n\n    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:1px; background:#E5E5E5; border-top:1px solid #E5E5E5; border-bottom:1px solid #E5E5E5;">\n      <div style="background:#fff; padding:32px 24px 32px 0; transition:background 0.15s;" style-hover="background:#FAFAFA;">\n        <div data-i18n="pc1t" style="font-weight:700; font-size:19px; margin-bottom:10px;">\u0418\u043d\u0442\u0435\u0433\u0440\u0430\u0446\u0438\u044f \u0432 \u0440\u0443\u0431\u0440\u0438\u043a\u0443</div>\n        <div data-i18n="pc1d" style="font-size:16px; color:#111; line-height:1.5;">\u0411\u0440\u0435\u043d\u0434 \u0441\u0442\u0430\u043d\u043e\u0432\u0438\u0442\u0441\u044f \u0447\u0430\u0441\u0442\u044c\u044e \u0440\u0435\u0434\u0430\u043a\u0446\u0438\u043e\u043d\u043d\u043e\u0433\u043e \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u0430: \u0433\u0435\u0440\u043e\u0439, \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0430, \u043f\u0440\u043e\u0434\u0443\u043a\u0442 \u0438\u043b\u0438 \u044d\u043a\u0441\u043f\u0435\u0440\u0442\u0438\u0437\u0430 \u0432\u043d\u0443\u0442\u0440\u0438 \u0438\u0441\u0442\u043e\u0440\u0438\u0438, \u0430 \u043d\u0435 \u0440\u044f\u0434\u043e\u043c \u0441 \u043d\u0435\u0439.</div>\n      </div>\n      <div style="background:#fff; padding:32px 24px; transition:background 0.15s;" style-hover="background:#FAFAFA;">\n        <div data-i18n="pc2t" style="font-weight:700; font-size:19px; margin-bottom:10px;">\u0421\u044a\u0451\u043c\u043a\u0430</div>\n        <div data-i18n="pc2d" style="font-size:16px; color:#111; line-height:1.5;">\u0420\u0435\u0434\u0430\u043a\u0446\u0438\u043e\u043d\u043d\u0430\u044f \u0444\u043e\u0442\u043e\u0441\u0435\u0441\u0441\u0438\u044f \u0441 \u0443\u0447\u0430\u0441\u0442\u0438\u0435\u043c \u043f\u0440\u043e\u0434\u0443\u043a\u0442\u0430 \u0438\u043b\u0438 \u043d\u0430 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0435 \u0431\u0440\u0435\u043d\u0434\u0430, \u0432 \u0432\u0438\u0437\u0443\u0430\u043b\u044c\u043d\u043e\u043c \u044f\u0437\u044b\u043a\u0435 Madeniet.</div>\n      </div>\n      <div style="background:#fff; padding:32px 24px; transition:background 0.15s;" style-hover="background:#FAFAFA;">\n        <div data-i18n="pc3t" style="font-weight:700; font-size:19px; margin-bottom:10px;">\u041f\u043e\u0441\u0442\u0435\u0440</div>\n        <div data-i18n="pc3d" style="font-size:16px; color:#111; line-height:1.5;">\u0412\u043a\u043b\u0430\u0434\u044b\u0448-\u043f\u043e\u0441\u0442\u0435\u0440 \u0441 \u0430\u0440\u0442\u043e\u043c \u043d\u043e\u043c\u0435\u0440\u0430 \u0438 \u043f\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435\u043c \u0431\u0440\u0435\u043d\u0434\u0430. \u0412\u0435\u0449\u044c, \u043a\u043e\u0442\u043e\u0440\u0443\u044e \u0432\u0435\u0448\u0430\u044e\u0442 \u043d\u0430 \u0441\u0442\u0435\u043d\u0443.</div>\n      </div>\n      <div style="background:#fff; padding:32px 24px 32px 0; transition:background 0.15s;" style-hover="background:#FAFAFA;">\n        <div data-i18n="pc4t" style="font-weight:700; font-size:19px; margin-bottom:10px;">\u0412\u043b\u043e\u0436\u0435\u043d\u0438\u0435</div>\n        <div data-i18n="pc4d" style="font-size:16px; color:#111; line-height:1.5;">\u0424\u0438\u0437\u0438\u0447\u0435\u0441\u043a\u0438\u0439 \u044d\u043b\u0435\u043c\u0435\u043d\u0442 \u0432\u043d\u0443\u0442\u0440\u0438 \u0436\u0443\u0440\u043d\u0430\u043b\u0430: \u043e\u0442\u043a\u0440\u044b\u0442\u043a\u0430, \u0441\u0442\u0438\u043a\u0435\u0440\u044b, \u043f\u0440\u043e\u043c\u043e\u043a\u043e\u0434, \u0441\u044d\u043c\u043f\u043b.</div>\n      </div>\n      <div style="background:#fff; padding:32px 24px; transition:background 0.15s;" style-hover="background:#FAFAFA;">\n        <div data-i18n="pc5t" style="font-weight:700; font-size:19px; margin-bottom:10px;">\u0421\u043f\u0435\u0448\u043b-\u043f\u0440\u043e\u0435\u043a\u0442</div>\n        <div data-i18n="pc5d" style="font-size:16px; color:#111; line-height:1.5;">\u041e\u0442\u0434\u0435\u043b\u044c\u043d\u044b\u0439 \u0444\u043e\u0440\u043c\u0430\u0442, \u043f\u0440\u0438\u0434\u0443\u043c\u0430\u043d\u043d\u044b\u0439 \u043f\u043e\u0434 \u0431\u0440\u0435\u043d\u0434 \u0441 \u043d\u0443\u043b\u044f: \u043e\u0442 \u0440\u0430\u0437\u0432\u043e\u0440\u043e\u0442\u0430 \u0434\u043e \u0441\u043e\u0432\u043c\u0435\u0441\u0442\u043d\u043e\u0439 \u0441\u0435\u0440\u0438\u0438 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u043e\u0432.</div>\n      </div>\n      <div style="background:#fff; padding:32px 24px; transition:background 0.15s;" style-hover="background:#FAFAFA;">\n        <div data-i18n="pc6t" style="font-weight:700; font-size:19px; margin-bottom:10px;">\u0414\u0438\u0434\u0436\u0438\u0442\u0430\u043b-\u0443\u0441\u0438\u043b\u0435\u043d\u0438\u0435</div>\n        <div data-i18n="pc6d" style="font-size:16px; color:#111; line-height:1.5;">\u041c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u043d\u043e\u043c\u0435\u0440\u0430 \u0432\u044b\u0445\u043e\u0434\u044f\u0442 \u0438 \u0432 \u043d\u0430\u0448\u0438\u0445 \u0441\u043e\u0446\u0441\u0435\u0442\u044f\u0445: 2,85 \u043c\u043b\u043d \u043f\u0440\u043e\u0441\u043c\u043e\u0442\u0440\u043e\u0432 \u0432 \u043c\u0435\u0441\u044f\u0446 \u0434\u043e\u0431\u0430\u0432\u043b\u044f\u044e\u0442\u0441\u044f \u043a \u043f\u0435\u0447\u0430\u0442\u043d\u043e\u043c\u0443 \u043e\u0445\u0432\u0430\u0442\u0443.</div>\n      </div>\n      <div style="background:#fff; padding:32px 24px 32px 0; transition:background 0.15s;" style-hover="background:#FAFAFA;">\n        <div data-i18n="pc7t" style="font-weight:700; font-size:19px; margin-bottom:10px;">\u041f\u0440\u0438\u0441\u0443\u0442\u0441\u0442\u0432\u0438\u0435 \u043d\u0430 Alem Comedy Fest</div>\n        <div data-i18n="pc7d" style="font-size:16px; color:#111; line-height:1.5;">\u0423\u043f\u043e\u043c\u0438\u043d\u0430\u043d\u0438\u0435 \u0438 \u0434\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0446\u0438\u044f \u043d\u0430 \u043f\u043b\u043e\u0449\u0430\u0434\u043a\u0430\u0445 \u0444\u0435\u0441\u0442\u0438\u0432\u0430\u043b\u044f.</div>\n      </div>\n    </div>\n\n    <p data-i18n="partOutro" style="font-size:20px; font-weight:600; line-height:1.5; max-width:760px; margin:56px 0 0;">\n      \u0420\u0430\u0441\u0441\u043a\u0430\u0436\u0438\u0442\u0435 \u043e \u0437\u0430\u0434\u0430\u0447\u0435 \u2014 \u043f\u0440\u0435\u0434\u043b\u043e\u0436\u0438\u043c 2\u20133 \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u0430, \u043a\u0430\u043a \u0435\u0451 \u0440\u0435\u0448\u0438\u0442\u044c \u0432\u043d\u0443\u0442\u0440\u0438 \u043d\u043e\u043c\u0435\u0440\u0430.\n    </p>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 8 \u2014 \u0420\u0410\u0417\u0412\u041e\u0420\u041e\u0422\u042b -->\n  <section style="max-width:1200px; margin:0 auto; padding:120px 24px;">\n    <h2 data-i18n="looksTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 48px;">\u041a\u0430\u043a \u044d\u0442\u043e \u0432\u044b\u0433\u043b\u044f\u0434\u0438\u0442 \u2014</h2>\n    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:24px;">\n      <div style="background:#F2F2F2; aspect-ratio:4/5; display:flex; align-items:center; justify-content:center;">\n        <span data-i18n="spread1" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888;">photo \u2014 \u0440\u0430\u0437\u0432\u043e\u0440\u043e\u0442 1</span>\n      </div>\n      <div style="background:#F2F2F2; aspect-ratio:4/5; display:flex; align-items:center; justify-content:center;">\n        <span data-i18n="spread2" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888;">photo \u2014 \u0440\u0430\u0437\u0432\u043e\u0440\u043e\u0442 2</span>\n      </div>\n      <div style="background:#F2F2F2; aspect-ratio:4/5; display:flex; align-items:center; justify-content:center;">\n        <span data-i18n="spread3" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888;">photo \u2014 \u0440\u0430\u0437\u0432\u043e\u0440\u043e\u0442 3</span>\n      </div>\n    </div>\n    <div data-i18n="looksNote" style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase; margin-top:24px; font-style:italic;">\n      [\u0434\u043e\u0431\u0430\u0432\u0438\u0442\u044c, \u043a\u043e\u0433\u0434\u0430 \u043f\u043e\u044f\u0432\u044f\u0442\u0441\u044f \u043c\u0430\u043a\u0435\u0442\u044b \u2014 \u044d\u0442\u043e\u0442 \u0431\u043b\u043e\u043a \u043f\u0440\u043e\u0434\u0430\u0451\u0442 \u0441\u0438\u043b\u044c\u043d\u0435\u0435 \u0432\u0441\u0435\u0445 \u0442\u0435\u043a\u0441\u0442\u043e\u0432 \u043d\u0430 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435]\n    </div>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <!-- BLOCK 9 \u2014 \u041a\u041e\u041d\u0422\u0410\u041a\u0422\u042b -->\n  <section id="contacts" style="max-width:1200px; margin:0 auto; padding:120px 24px 160px;">\n    <h2 data-i18n="contactTitle" style="font-size:clamp(28px,4vw,44px); font-weight:800; letter-spacing:-0.02em; margin:0 0 64px;">\u041e\u0431\u0441\u0443\u0434\u0438\u0442\u044c \u043f\u0430\u0440\u0442\u043d\u0451\u0440\u0441\u0442\u0432\u043e \u2014</h2>\n\n    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:48px; margin-bottom:64px;">\n      <div>\n        <div style="font-weight:700; font-size:22px; margin-bottom:8px;">\u0418\u043b\u044c\u043b\u044f\u0440\u0430</div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#888; margin-bottom:4px;">Head of PR & Commercial</div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:15px;">+7 777 199 02 09</div>\n      </div>\n      <div>\n        <div style="font-weight:700; font-size:22px; margin-bottom:8px;">\u0410\u0434\u0435\u043c\u0438</div>\n        <div data-i18n="role2" style="font-family:'IBM Plex Mono',monospace; font-size:13px; color:#888; margin-bottom:4px;">\u0430\u0441\u0441\u0438\u0441\u0442\u0435\u043d\u0442</div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:15px;">+7 775 018 20 08</div>\n      </div>\n      <div>\n        <div style="font-weight:700; font-size:22px; margin-bottom:8px;">Telegram</div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:15px;">@mediamadeniet</div>\n      </div>\n      <div>\n        <div style="font-weight:700; font-size:22px; margin-bottom:8px;">Email</div>\n        <div style="font-family:'IBM Plex Mono',monospace; font-size:15px;">themadeniett@gmail.com</div>\n      </div>\n    </div>\n\n    <a data-i18n="dlBtn" href="#" style="font-family:'IBM Plex Mono',monospace; font-size:14px; color:#fff; background:#111; text-decoration:none; padding:18px 28px; display:inline-block; transition:background 0.15s, color 0.15s, box-shadow 0.15s;" style-hover="background:#fff; color:#111; box-shadow:inset 0 0 0 1px #111;">\n      \u0421\u043a\u0430\u0447\u0430\u0442\u044c \u043c\u0435\u0434\u0438\u0430\u043a\u0438\u0442 (PDF)\n    </a>\n  </section>\n\n  <div style="height:1px; background:#E5E5E5; width:100%;"></div>\n\n  <footer style="max-width:1200px; margin:0 auto; padding:32px 24px;">\n    <div style="font-family:'IBM Plex Mono',monospace; font-size:12px; color:#888; text-transform:lowercase;">\n      madeniet \u00b7 culture \u00b7 kazakhstan \u00b7 2026\n    </div>\n  </footer>\n\n</div>`;
-
-export const hyundaiHtml = `
-<div class="hy-page">
-  <header id="top" class="hy-header">
-    <nav class="hy-nav" aria-label="Hyundai proposal navigation">
-      <a data-i18n="hyNavConcept" href="#routes">идея</a>
-      <a data-i18n="hyNavValue" href="#value">выгода</a>
-      <a data-i18n="hyNavStats" href="#stats">цифры</a>
-      <a data-i18n="hyNavFormats" href="#formats">форматы</a>
-      <a data-i18n="hyNavContacts" href="#contacts">контакты</a>
-    </nav>
-    <a href="#top" class="hy-lockup" aria-label="Madeniet × Hyundai">
-      <span class="hy-made"><span>made</span><span>niet</span></span>
-      <span class="hy-cross">×</span>
-      <span class="brand-logo hyundai-logo">HYUNDAI</span>
+export const partnersHtml = `
+<div class="home-page home-v4">
+  <header id="top" class="home-header">
+    <a href="#top" class="home-logo" aria-label="Madeniet">
+      <span>made</span><span>niet</span>
     </a>
-    <div class="hy-lang">
-      <span data-lang-btn="ru">ru</span><span>/</span><span data-lang-btn="kz">kz</span>
+
+    <nav class="home-nav" aria-label="Home navigation">
+      <a data-i18n="navAbout" href="#about">о выпуске</a>
+      <a data-i18n="navDistribution" href="#distribution">дистрибуция</a>
+      <a data-i18n="navMockups" href="#mockups">макеты</a>
+      <a data-i18n="navFormats" href="#formats">форматы</a>
+      <a data-i18n="navPrice" href="#price">прайс</a>
+      <a data-i18n="navContacts" href="#contacts">контакты</a>
+    </nav>
+
+    <div class="home-lang" aria-label="Language switcher">
+      <button data-lang-btn="kz" type="button">kz</button>
+      <span>/</span>
+      <button data-lang-btn="ru" type="button">ru</button>
     </div>
   </header>
 
   <main>
-    <section class="hy-hero">
-      <div class="hy-hero__text">
-        <p data-i18n="hyHeroKicker" class="hy-kicker">персональное предложение · hyundai auto kazakhstan</p>
-        <h1 data-i18n="hyHeroTitle">Движение сквозь культуру Казахстана</h1>
-        <p data-i18n="hyHeroLead" class="hy-lead">
-          Предложение о партнёрстве в первом печатном номере Madeniet — журнале о современной культуре, людях и местах, которые формируют новый Казахстан.
-        </p>
-        <div class="hy-meta">
-          <span data-i18n="hyMeta1">сентябрь 2026</span>
-          <span data-i18n="hyMeta2">печатный выпуск №1</span>
-          <span data-i18n="hyMeta3">Alem Comedy Fest</span>
-          <span data-i18n="hyMeta4">digital support</span>
+    <section class="home-hero home-hero--photo" style="background-image:url('/assets/home-hero-yurt-flipped.jpg')">
+      <div class="home-hero__overlay"></div>
+      <div class="home-hero__copy">
+        <p data-i18n="heroKicker" class="home-kicker home-kicker--light">madeniet · печатный выпуск №1 · сентябрь 2026</p>
+        <h1 data-i18n="heroTitle">Культура Казахстана в печати</h1>
+        <p data-i18n="heroLead" class="home-lead">Первый печатный номер Madeniet: 5000 экземпляров в музеях, магазинах, ресторанах и культурных пространствах Алматы.</p>
+        <div class="home-chip-row">
+          <span class="home-chip">5000 экз.</span>
+          <span class="home-chip" data-i18n="heroChip1">городская дистрибуция</span>
+          <span class="home-chip" data-i18n="heroChip2">печатный выпуск №1</span>
         </div>
-        <div class="hy-actions">
-          <a data-i18n="hyBtnConcept" href="#routes" class="hy-btn hy-btn--primary">Смотреть идею</a>
-          <a data-i18n="hyBtnContact" href="#contacts" class="hy-btn hy-btn--ghost">Обсудить партнёрство</a>
-        </div>
-      </div>
-      <div class="hy-hero__visual" aria-label="Концепция Madeniet × Hyundai">
-        <div class="hy-visual-card">
-          <div class="hy-visual-card__top">
-            <span>Madeniet №1</span>
-            <span>Hyundai</span>
-          </div>
-          <img src="/assets/magazine-routes-draft.png" alt="Концептуальный макет спецпроекта" />
+        <div class="home-actions">
+          <a data-i18n="heroPrimary" href="#formats" class="home-btn home-btn--dark">форматы партнёрства</a>
+          <a data-i18n="heroSecondary" href="#mockups" class="home-btn home-btn--ghost">посмотреть макеты</a>
         </div>
       </div>
     </section>
 
-    <section id="routes" class="hy-section hy-concept">
-      <div class="hy-section-head">
-        <p data-i18n="hyConceptKicker" class="hy-kicker">главная идея для Hyundai</p>
-        <h2 data-i18n="hyConceptTitle">Маршруты вдохновения</h2>
-        <p data-i18n="hyConceptLead">
-          Казахстанская культура живёт не только в музеях. Она находится вдоль дорог: в Тамгалы, Туркестане, Чарыне, Улытау, Мангистау и местах, куда невозможно добраться случайно.
-        </p>
+    <section id="about" class="home-section home-about">
+      <div class="home-section-head">
+        <p data-i18n="aboutKicker" class="home-kicker">что это</p>
+        <h2 data-i18n="aboutTitle">Не просто медиа-кит, а культурный объект для брендов</h2>
       </div>
-      <div class="hy-concept-grid">
+      <div class="home-about__grid">
         <article>
           <span>01</span>
-          <h3 data-i18n="hyConcept1Title">Автомобиль как проводник</h3>
-          <p data-i18n="hyConcept1Text">Hyundai не становится рекламным объектом в кадре. Он становится способом добраться до культуры страны.</p>
+          <h3 data-i18n="aboutCard1Title">Первый номер</h3>
+          <p data-i18n="aboutCard1Text">Печатный выпуск Madeniet о кино, музыке, моде, стендапе, архивах и людях, которые формируют новую культурную сцену.</p>
         </article>
         <article>
           <span>02</span>
-          <h3 data-i18n="hyConcept2Title">Локальная сборка, локальные истории</h3>
-          <p data-i18n="hyConcept2Text">Проект можно строить вокруг Hyundai алматинской сборки и маршрутов, которые считываются как настоящие казахстанские истории.</p>
+          <h3 data-i18n="aboutCard2Title">5000 экземпляров</h3>
+          <p data-i18n="aboutCard2Text">Тираж увеличен до 5000: это уже не сувенирный выпуск, а заметное офлайн-присутствие в городе.</p>
         </article>
         <article>
           <span>03</span>
-          <h3 data-i18n="hyConcept3Title">Editorial, не баннер</h3>
-          <p data-i18n="hyConcept3Text">Фотосъёмка, маршрут, герой и текст работают как материал журнала — без ощущения прямой рекламы.</p>
+          <h3 data-i18n="aboutCard3Title">Долго живёт</h3>
+          <p data-i18n="aboutCard3Text">Журнал не исчезает через 24 часа как сторис: его оставляют на столах, забирают домой и сохраняют как вещь.</p>
         </article>
       </div>
-      <figure class="hy-wide-mockup">
-        <img src="/assets/magazine-routes-draft.png" alt="Макет разворота спецпроекта" />
-        <figcaption data-i18n="hyMockupCaption">Концептуальный макет. Финальные маршруты, герои, фотографии и текст согласуются с командой Hyundai.</figcaption>
-      </figure>
     </section>
 
-    <section id="why" class="hy-blue">
-      <div class="hy-blue__inner">
-        <div class="hy-section-head hy-section-head--light">
-          <p data-i18n="hyWhyKicker" class="hy-kicker">почему Hyundai</p>
-          <h2 data-i18n="hyWhyTitle">Общее видение</h2>
-          <p data-i18n="hyWhyLead">
-            Hyundai уже говорит с Казахстаном через движение, образование и культуру. Madeniet предлагает превратить это в цельную редакционную историю первого печатного выпуска.
-          </p>
+    <section id="distribution" class="home-section home-distribution">
+      <div class="home-section-head">
+        <p data-i18n="distributionKicker" class="home-kicker">где будет журнал</p>
+        <h2 data-i18n="distributionTitle">Дистрибуция в местах, где культура уже происходит</h2>
+        <p data-i18n="distributionLead">Кликайте по точкам: справа меняется фотография и сценарий контакта с аудиторией.</p>
+      </div>
+
+      <div class="distribution-showcase" data-distribution-root>
+        <div class="distribution-showcase__tabs">
+          <button class="is-active" type="button" data-distribution-btn data-i18n="distTab1" data-image="/assets/dist-store.jpeg" data-ru-title="магазины и concept stores" data-ru-text="Журнал появляется в магазинах и lifestyle-точках: его можно заметить, взять в руки и забрать как красивый physical-объект." data-kz-title="дүкендер мен concept stores" data-kz-text="Журнал дүкендер мен lifestyle-нүктелерде тарайды: оны байқап, қолға алып, әдемі physical-объект ретінде алып кетуге болады.">магазины</button>
+          <button type="button" data-distribution-btn data-i18n="distTab2" data-image="/assets/dist-abr.jpeg" data-ru-title="рестораны ABR+" data-ru-text="В ресторанной среде журнал работает мягко: его листают за столом, обсуждают и возвращаются к нему без ощущения рекламы." data-kz-title="ABR+ мейрамханалары" data-kz-text="Мейрамхана ортасында журнал жұмсақ жұмыс істейді: оны үстелде қарайды, талқылайды және жарнама сияқты қабылдамайды.">abr+</button>
+          <button type="button" data-distribution-btn data-i18n="distTab3" data-image="/assets/dist-tselinny.png" data-ru-title="Целинный и культурные пространства" data-ru-text="Через культурные площадки журнал попадает к сообществу, которое реально формирует городскую повестку и культурные разговоры." data-kz-title="Целинный және мәдени кеңістіктер" data-kz-text="Мәдени алаңдар арқылы журнал қалалық күн тәртібін және мәдени әңгімелерді қалыптастыратын аудиторияға жетеді.">целинный</button>
+          <button type="button" data-distribution-btn data-i18n="distTab4" data-image="/assets/dist-ama.jpg" data-ru-title="Almaty Museum of Arts" data-ru-text="В музейной среде журнал воспринимается как коллекционный культурный объект, а не как одноразовая рекламная листовка." data-kz-title="Almaty Museum of Arts" data-kz-text="Музей ортасында журнал бір реттік жарнама емес, коллекциялық мәдени объект ретінде қабылданады.">almaty museum of arts</button>
         </div>
-        <div class="hy-proof-grid">
-          <article>
-            <div class="hy-proof-img"><img src="/assets/hyundai-oyu.png" alt="OYU art car" /></div>
-            <h3 data-i18n="hyWhy1Title">Культура</h3>
-            <p data-i18n="hyWhy1Text">Арт-кары, визуальный язык, локальная эстетика и связь с современным Казахстаном.</p>
-          </article>
-          <article>
-            <div class="hy-proof-img"><img src="/assets/engineering-lab.jpeg" alt="Engineering Lab" /></div>
-            <h3 data-i18n="hyWhy2Title">Образование</h3>
-            <p data-i18n="hyWhy2Text">Инженерная лаборатория и поддержка молодых специалистов — прогресс не только в продукте, но и в людях.</p>
-          </article>
-          <article>
-            <div class="hy-proof-img"><img src="/assets/bayga-cars.jpg" alt="Автомобили для победителей байги" /></div>
-            <h3 data-i18n="hyWhy3Title">Движение</h3>
-            <p data-i18n="hyWhy3Text">Автомобиль как часть дороги, традиций, городов и новых маршрутов по стране.</p>
-          </article>
+
+        <div class="distribution-showcase__preview">
+          <div class="distribution-preview__image-wrap">
+            <img id="distribution-image" class="distribution-preview__image" src="/assets/dist-store.jpeg" alt="Distribution visual" />
+          </div>
+          <div class="distribution-preview__content">
+            <span class="distribution-preview__eyebrow" data-i18n="distributionEyebrow">точки распространения</span>
+            <h3 id="distribution-title">магазины и concept stores</h3>
+            <p id="distribution-text">Журнал появляется в магазинах и lifestyle-точках: его можно заметить, взять в руки и забрать как красивый physical-объект.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="value" class="hy-section hy-value">
-      <div class="hy-section-head">
-        <p data-i18n="hyValueKicker" class="hy-kicker">что получает бренд</p>
-        <h2 data-i18n="hyValueTitle">Не рекламную полосу, а культурный PR-актив</h2>
+    <section id="mockups" class="home-section home-mockups">
+      <div class="home-section-head">
+        <p data-i18n="mockupKicker" class="home-kicker">visual moodboard</p>
+        <h2 data-i18n="mockupTitle">Как могут выглядеть страницы будущего номера</h2>
+        <p data-i18n="mockupLead">Референсы на визуальный язык: крупная типографика, открытая сетка, много воздуха и сильные развороты.</p>
       </div>
-      <div class="hy-value-grid">
-        <article><span>01</span><p data-i18n="hyValue1">Культурное позиционирование Hyundai без ощущения прямой продажи.</p></article>
-        <article><span>02</span><p data-i18n="hyValue2">Связь с молодой городской аудиторией Madeniet и офлайн-аудиторией первого выпуска.</p></article>
-        <article><span>03</span><p data-i18n="hyValue3">Визуальный спецпроект, который можно использовать в PR, SMM и внутренних презентациях.</p></article>
-        <article><span>04</span><p data-i18n="hyValue4">Присутствие в первом печатном номере — событии, которое само по себе имеет коллекционную ценность.</p></article>
-        <article><span>05</span><p data-i18n="hyValue5">Контент вокруг локальной сборки, путешествий по Казахстану и современной культуры.</p></article>
-        <article><span>06</span><p data-i18n="hyValue6">Мягкая интеграция бренда в историю, которую хочется дочитать и сохранить.</p></article>
+
+      <div class="home-mood-grid home-mood-grid--balanced home-mood-grid--uniform">
+        <article class="home-mood-card">
+          <img src="/assets/mood-basquiat.png" alt="Art research magazine spread reference" />
+          <div class="home-mood-card__meta">
+            <span>01</span>
+            <h3 data-i18n="pin1Title">Art research spread</h3>
+            <p data-i18n="pin1Text">Разворот, где текст, архивный объект и цветовая плоскость собираются в исследование героя.</p>
+          </div>
+        </article>
+        <article class="home-mood-card">
+          <img src="/assets/mood-textile.webp" alt="Textile editorial magazine spread reference" />
+          <div class="home-mood-card__meta">
+            <span>02</span>
+            <h3 data-i18n="pin2Title">Object as story</h3>
+            <p data-i18n="pin2Text">Предмет, силуэт и крупная типографика работают как культурный сюжет, а не как обычный рекламный макет.</p>
+          </div>
+        </article>
+        <article class="home-mood-card">
+          <img src="/assets/mood-deem-spread.jpg" alt="Night culture editorial magazine spread reference" />
+          <div class="home-mood-card__meta">
+            <span>03</span>
+            <h3 data-i18n="pin3Title">Manifest layout</h3>
+            <p data-i18n="pin3Text">Большая цитата, живая фотография и плотная редакционная сетка дают ощущение настоящего журнала.</p>
+          </div>
+        </article>
+        <article class="home-mood-card">
+          <img src="/assets/mood-raw-01.jpg" alt="Editorial magazine page reference" />
+          <div class="home-mood-card__meta">
+            <span>04</span>
+            <h3 data-i18n="pin4Title">Archive page</h3>
+            <p data-i18n="pin4Text">Квадратная композиция, бумажная фактура и спокойный текстовый блок для архивных материалов.</p>
+          </div>
+        </article>
+        <article class="home-mood-card">
+          <img src="/assets/mood-japan.webp" alt="Graphic typography magazine spread reference" />
+          <div class="home-mood-card__meta">
+            <span>05</span>
+            <h3 data-i18n="pin5Title">Graphic typography</h3>
+            <p data-i18n="pin5Text">Яркий типографический разворот для материалов про дизайн, стиль, моду и визуальную культуру.</p>
+          </div>
+        </article>
+        <article class="home-mood-card">
+          <img src="/assets/mood-editorial.jpg" alt="Monochrome editorial spread reference" />
+          <div class="home-mood-card__meta">
+            <span>06</span>
+            <h3 data-i18n="pin6Title">Editorial opening</h3>
+            <p data-i18n="pin6Text">Строгая сетка и сильный заголовок — хороший тон для вводных страниц и брендовых эссе.</p>
+          </div>
+        </article>
       </div>
     </section>
 
-    <section id="safety" class="hy-safety">
-      <div>
-        <p data-i18n="hySafetyKicker" class="hy-kicker">brand safety</p>
-        <h2 data-i18n="hySafetyTitle">Всё согласовывается с командой Hyundai</h2>
+    <section id="formats" class="home-section home-formats">
+      <div class="home-section-head">
+        <p data-i18n="formatsKicker" class="home-kicker">форматы партнёрства</p>
+        <h2 data-i18n="formatsTitle">Не “рекламная полоса”, а формат внутри культурной истории</h2>
+        <p data-i18n="formatsLead">Фокус — на журнале, макете, спецпроекте, физическом объекте и digital-поддержке.</p>
       </div>
-      <p data-i18n="hySafetyText">
-        Маршруты, герои, визуальный стиль, логотипы, финальный текст и макеты проходят согласование. Мы сохраняем редакционный вкус Madeniet, но работаем аккуратно с бренд-гайдом, репутационными рисками и tone of voice Hyundai.
-      </p>
-    </section>
 
-    <section id="stats" class="hy-section hy-stats">
-      <div class="hy-section-head">
-        <p data-i18n="hyStatsKicker" class="hy-kicker">madeniet в цифрах</p>
-        <h2 data-i18n="hyStatsTitle">Аудитория, которая уже выбирает культуру</h2>
-        <p data-i18n="hyStatsNote">Instagram insights · 4 июня — 4 июля 2026 · органика, без таргета.</p>
-      </div>
-      <div class="hy-stats-grid">
-        <article><strong data-stat="2.85|m">2,85 млн</strong><span data-i18n="hyStat1">просмотров</span></article>
-        <article><strong data-stat="1.27|m">1,27 млн</strong><span data-i18n="hyStat2">охват</span></article>
-        <article><strong data-stat="98|%">98%</strong><span data-i18n="hyStat3">органика</span></article>
-        <article><strong data-stat="74|%">74%</strong><span data-i18n="hyStat4">новая аудитория</span></article>
-      </div>
-    </section>
-
-    <section id="issue" class="hy-issue">
-      <div class="hy-issue__content">
-        <p data-i18n="hyIssueKicker" class="hy-kicker">первый печатный номер</p>
-        <h2 data-i18n="hyIssueTitle">Контекст, в который заходит Hyundai</h2>
-        <p data-i18n="hyIssueLead">
-          Внутри номера — герои современной культуры: музыка, кино, стендап, архивы и разговор о будущем Казахстана. Hyundai может стать партнёром не одного материала, а целого культурного момента.
-        </p>
-      </div>
-      <div class="hy-issue__cards">
-        <article><span data-i18n="hyIssueL1">выход</span><strong data-i18n="hyIssueV1">сентябрь 2026</strong></article>
-        <article><span data-i18n="hyIssueL2">формат</span><strong data-i18n="hyIssueV2">печатный выпуск + digital</strong></article>
-        <article><span data-i18n="hyIssueL3">партнёр события</span><strong data-i18n="hyIssueV3">Alem Comedy Fest</strong></article>
-        <article><span data-i18n="hyIssueL4">тираж</span><strong data-i18n="hyIssueV4">1 000 экз.</strong></article>
-      </div>
-    </section>
-
-    <section id="formats" class="hy-section hy-formats">
-      <div class="hy-section-head">
-        <p data-i18n="hyFormatsKicker" class="hy-kicker">форматы партнёрства</p>
-        <h2 data-i18n="hyFormatsTitle">Три понятных уровня вместо меню услуг</h2>
-        <p data-i18n="hyFormatsLead">Финальный пакет лучше собрать после короткой встречи: под KPI, календарь, доступные автомобили и PR-задачи Hyundai.</p>
-      </div>
-      <div class="hy-package-grid">
+      <div class="format-list format-list--clean format-list--expanded">
         <article>
-          <div class="hy-package-top"><span>01</span><b data-i18n="hyPack1Label">main partner</b></div>
-          <h3 data-i18n="hyPack1Title">Партнёр выпуска</h3>
-          <p data-i18n="hyPack1Text">Присутствие Hyundai в коммуникациях первого номера: печать, digital, презентация выпуска и партнёрские материалы.</p>
-        </article>
-        <article class="hy-package--featured">
-          <div class="hy-package-top"><span>02</span><b data-i18n="hyPack2Label">special project</b></div>
-          <h3 data-i18n="hyPack2Title">«Маршруты вдохновения»</h3>
-          <p data-i18n="hyPack2Text">Редакционный фотопроект с Hyundai: автомобиль, маршруты Казахстана, герои номера и серия материалов в печати и digital.</p>
+          <span>01</span>
+          <h3 data-i18n="format1Title">Партнёр выпуска</h3>
+          <p data-i18n="format1Text">Статусное присутствие в первом печатном номере, коммуникациях выпуска и партнёрских материалах.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format1Meta1">1 статусный партнёр</i>
+            <i data-i18n="format1Meta2">до 5 точек касания</i>
+          </div>
         </article>
         <article>
-          <div class="hy-package-top"><span>03</span><b data-i18n="hyPack3Label">presence package</b></div>
-          <h3 data-i18n="hyPack3Title">Присутствие в номере</h3>
-          <p data-i18n="hyPack3Text">Аккуратный разворот, брендированный материал или визуальное присутствие в стиле номера без перегруза рекламой.</p>
+          <span>02</span>
+          <h3 data-i18n="format2Title">Индивидуальный спецпроект</h3>
+          <p data-i18n="format2Text">Отдельная идея под бренд: маршруты, герои, фотосъёмка, городская история или культурный PR-актив.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format2Meta1">1 кастомная идея</i>
+            <i data-i18n="format2Meta2">объём под задачу</i>
+          </div>
+        </article>
+        <article>
+          <span>03</span>
+          <h3 data-i18n="format3Title">Разворот в номере</h3>
+          <p data-i18n="format3Text">Визуальный разворот или брендированный материал, который выглядит как часть журнала, а не как баннер.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format3Meta1">2–4 страницы</i>
+            <i data-i18n="format3Meta2">editorial integration</i>
+          </div>
+        </article>
+        <article>
+          <span>04</span>
+          <h3 data-i18n="format4Title">Постер / вкладыш</h3>
+          <p data-i18n="format4Text">Открытка, постер, стикеры, промокод или другой физический элемент внутри выпуска.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format4Meta1">1 физический носитель</i>
+            <i data-i18n="format4Meta2">внутри всего тиража</i>
+          </div>
+        </article>
+        <article>
+          <span>05</span>
+          <h3 data-i18n="format5Title">Digital support</h3>
+          <p data-i18n="format5Text">Поддержка материала в соцсетях Madeniet и адаптация визуала под digital.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format5Meta1">3–5 digital касаний</i>
+            <i data-i18n="format5Meta2">post / story / анонс</i>
+          </div>
+        </article>
+        <article>
+          <span>06</span>
+          <h3 data-i18n="format6Title">Дистрибуционный пакет</h3>
+          <p data-i18n="format6Text">Отдельный акцент на точках, где журнал будет раздаваться: магазины, музеи, рестораны и культурные пространства.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format6Meta1">5000 экземпляров</i>
+            <i data-i18n="format6Meta2">городские точки</i>
+          </div>
+        </article>
+        <article>
+          <span>07</span>
+          <h3 data-i18n="format7Title">QR / промокод</h3>
+          <p data-i18n="format7Text">Интеграция QR, промокода или landing-ссылки внутри печатного материала, чтобы связать offline с digital.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format7Meta1">trackable action</i>
+            <i data-i18n="format7Meta2">offline → online</i>
+          </div>
+        </article>
+        <article>
+          <span>08</span>
+          <h3 data-i18n="format8Title">Премиальное размещение</h3>
+          <p data-i18n="format8Text">Обложка, гейтфолд, первый разворот или другой заметный формат для брендов, которым нужна максимальная видимость.</p>
+          <div class="format-card__meta">
+            <i data-i18n="format8Meta1">cover / gatefold</i>
+            <i data-i18n="format8Meta2">maximum visibility</i>
+          </div>
         </article>
       </div>
     </section>
 
-    <footer id="contacts" class="hy-footer">
+    <section id="price" class="home-section home-price">
+      <div class="home-section-head">
+        <p data-i18n="priceKicker" class="home-kicker">прайс-лист</p>
+        <h2 data-i18n="priceTitle">Выберите позицию — журнал покажет размещение</h2>
+        <p data-i18n="priceLead">Интерактивный прайс: нажмите на строку, и справа подсветится зона в журнале, которую занимает выбранный формат.</p>
+      </div>
+
+      <div class="price-interactive">
+        <div class="price-table" aria-label="Madeniet print price list">
+          <button class="price-row is-active" type="button" data-price-row data-placement="inner" data-ru-title="Внутренняя полоса" data-kz-title="Ішкі бет" data-price="300 000 ₸"><span>Внутренняя полоса</span><b>300 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="contents" data-ru-title="Содержание / Выходные данные" data-kz-title="Мазмұн / шығу деректері" data-price="350 000 ₸"><span>Содержание / Выходные данные</span><b>350 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="editor" data-ru-title="Письмо редактора" data-kz-title="Редактор хаты" data-price="450 000 ₸"><span>Письмо редактора</span><b>450 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="insert" data-ru-title="Инсерт" data-kz-title="Инсерт" data-price="500 000 ₸"><span>Инсерт</span><b>500 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="spread" data-ru-title="Внутренний разворот" data-kz-title="Ішкі жайылма" data-price="600 000 ₸"><span>Внутренний разворот</span><b>600 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="premium-spread" data-ru-title="Премиальный разворот" data-kz-title="Премиум жайылма" data-price="800 000 ₸"><span>Премиальный разворот</span><b>800 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="third-spread" data-ru-title="Третий разворот" data-kz-title="Үшінші жайылма" data-price="950 000 ₸"><span>Третий разворот</span><b>950 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="second-spread" data-ru-title="Второй разворот" data-kz-title="Екінші жайылма" data-price="1 100 000 ₸"><span>Второй разворот</span><b>1 100 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="first-spread" data-ru-title="Первый разворот" data-kz-title="Бірінші жайылма" data-price="1 500 000 ₸"><span>Первый разворот</span><b>1 500 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="cover3" data-ru-title="Третья обложка" data-kz-title="Үшінші мұқаба" data-price="1 400 000 ₸"><span>Третья обложка</span><b>1 400 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="cover4" data-ru-title="Четвёртая обложка" data-kz-title="Төртінші мұқаба" data-price="1 700 000 ₸"><span>Четвёртая обложка</span><b>1 700 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="gatefold" data-ru-title="Гейтфолд на обложке" data-kz-title="Мұқабадағы гейтфолд" data-price="1 850 000 ₸"><span>Гейтфолд на обложке</span><b>1 850 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="cover1" data-ru-title="Первая обложка" data-kz-title="Бірінші мұқаба" data-price="2 000 000 ₸"><span>Первая обложка</span><b>2 000 000 ₸</b></button>
+          <button class="price-row" type="button" data-price-row data-placement="special" data-ru-title="Спецпроект" data-kz-title="Спецжоба" data-price="по запросу"><span>Спецпроект</span><b>по запросу</b></button>
+        </div>
+
+        <div class="price-preview price-preview--detailed">
+          <div class="price-preview__head">
+            <span data-i18n="pricePreviewKicker">выбранный формат</span>
+            <h3 id="price-selected-title">Внутренняя полоса</h3>
+            <b id="price-selected-value">300 000 ₸</b>
+          </div>
+
+          <div class="price-detail-card">
+            <p id="price-selected-detail">Одна рекламная страница внутри журнала. Подходит для аккуратного имиджевого макета, визуального объявления или короткого бренд-сообщения.</p>
+            <ul id="price-selected-list">
+              <li>1 полоса внутри номера</li>
+              <li>адаптация макета под стиль журнала</li>
+              <li>подходит для QR, промокода или имиджевого сообщения</li>
+            </ul>
+          </div>
+
+          <div class="price-magazine price-magazine--clear" data-price-magazine data-placement="inner">
+            <div class="price-placement-label" id="price-placement-label">Внутренняя полоса</div>
+            <div class="price-book">
+              <div class="price-page price-page--left">
+                <span>madeniet</span><i>12</i>
+                <div class="price-page__grid"></div>
+              </div>
+              <div class="price-page price-page--right">
+                <span>culture story</span><i>13</i>
+                <div class="price-page__grid"></div>
+              </div>
+              <div class="price-insert">insert</div>
+              <div class="price-gatefold price-gatefold--left"></div>
+              <div class="price-gatefold price-gatefold--right"></div>
+            </div>
+            <div class="price-legend">
+              <span></span>
+              <p data-i18n="pricePreviewText">Красная зона показывает, какая часть журнала будет занята выбранным форматом.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacts" class="home-section home-contacts">
       <div>
-        <p data-i18n="hyContactKicker" class="hy-kicker">следующий шаг</p>
-        <h2 data-i18n="hyContactTitle">Давайте обсудим, какой формат будет сильнее для Hyundai</h2>
-        <p data-i18n="hyContactText">Готовы прийти к вам, созвониться на 20 минут или собрать короткую презентацию под вашу команду маркетинга и PR.</p>
+        <p data-i18n="contactKicker" class="home-kicker">контакты</p>
+        <h2 data-i18n="contactTitle">Обсудить партнёрство</h2>
+        <p data-i18n="contactLead">Расскажите, какой бренд и какая задача — мы предложим 2–3 формата участия в первом номере.</p>
       </div>
-      <div class="hy-contact-card">
-        <a data-i18n="hyContactTelegram" href="https://t.me/" target="_blank" rel="noopener noreferrer">Написать в Telegram</a>
-        <a data-i18n="hyContactMedia" href="/files/Madeniet_Media_Kit.pdf" download="Madeniet_Media_Kit.pdf">Скачать media kit</a>
-        <span data-i18n="hyContactNote">Madeniet × Hyundai · September 2026</span>
+
+      <div class="contact-card">
+        <span>Head of PR & Commercial</span>
+        <h3>Ильляра</h3>
+        <a href="tel:+77771990209">+7 777 199 02 09</a>
+        <a href="https://t.me/illyara" target="_blank" rel="noopener noreferrer">@illyara</a>
+        <a href="mailto:themadeniett@gmail.com">themadeniett@gmail.com</a>
       </div>
-    </footer>
+    </section>
   </main>
 </div>
 `;

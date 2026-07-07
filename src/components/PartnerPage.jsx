@@ -299,6 +299,22 @@ export default function PartnerPage({ page }) {
           </div>
         </section>
 
+        {t.price && (
+          <section id="price" className="pp-section pp-price-list">
+            <SectionHead kicker={t.price.kicker} title={t.price.title} lead={t.price.lead} />
+            <div className="pp-price-grid">
+              {t.price.items.map((item) => (
+                <article key={item.title} className={item.featured ? "pp-price--featured" : ""}>
+                  <span>{item.label}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.text}</p>
+                  <b>{item.price}</b>
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
         <footer id="contacts" className="pp-footer">
           <div>
             <p className="pp-kicker">{t.contact.kicker}</p>
