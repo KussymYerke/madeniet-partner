@@ -52,6 +52,121 @@ function enhanceHyundaiImages(root) {
   });
 }
 
+function polishPartnersPage(root) {
+  // Home page: make the audience numbers start from zero and animate on scroll.
+  root.querySelectorAll("[data-stat]").forEach((el) => {
+    if (!el.dataset.homeCountReady) {
+      const kind = (el.getAttribute("data-stat") || "0|%").split("|")[1];
+      el.textContent = fmtFactory(
+        localStorage.getItem("madeniet-lang") || "ru",
+      )(0, kind);
+      el.dataset.homeCountReady = "true";
+    }
+  });
+
+  // Дополненный блок "Формат" вместо черновых плейсхолдеров.
+  const formatTitle = root.querySelector('[data-i18n="fmtTitle"]');
+  const formatSection = formatTitle?.closest("section");
+  if (formatSection && formatSection.dataset.polished !== "true") {
+    const v1 = formatSection.querySelector('[data-i18n="fmtV1"]');
+    const v2 = formatSection.querySelector('[data-i18n="fmtV2"]');
+    const v3 = formatSection.querySelector('[data-i18n="fmtV3"]');
+    const para = formatSection.querySelector('[data-i18n="fmtPara"]');
+    if (v1) {
+      v1.textContent = "1 000 экз.";
+      v1.style.color = "#111";
+    }
+    if (v2) v2.textContent = "сентябрь 2026";
+    if (v3) {
+      v3.textContent =
+        "Alem Comedy Fest, кофейни, концепт-сторы, партнёрские события";
+      v3.style.color = "#111";
+    }
+    if (para) {
+      para.innerHTML =
+        "Печатный номер работает как объект: его берут в руки, листают, оставляют на столах и передают дальше. Поэтому партнёрство в первом выпуске — это не просто рекламный контакт, а присутствие внутри культурного артефакта.";
+    }
+    formatSection.insertAdjacentHTML(
+      "beforeend",
+      `
+      <div class="format-extra-grid">
+        <article>
+          <span>01</span>
+          <h3>Печатный носитель</h3>
+          <p>Развороты, вкладыши, постеры и аккуратная интеграция в визуальный язык номера.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Дистрибуция</h3>
+          <p>Журнал появляется не только онлайн: он попадает в руки аудитории на событиях и городских точках.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Digital support</h3>
+          <p>Материалы номера усиливаются в соцсетях Madeniet, где уже есть органический охват.</p>
+        </article>
+      </div>
+    `,
+    );
+    formatSection.dataset.polished = "true";
+  }
+
+  // Блок "Как это выглядит" — вместо пустых серых карточек делаем аккуратную витрину форматов.
+  const looksTitle = root.querySelector('[data-i18n="looksTitle"]');
+  const looksSection = looksTitle?.closest("section");
+  if (looksSection && looksSection.dataset.polished !== "true") {
+    const oldGrid = Array.from(looksSection.children).find(
+      (el) =>
+        el instanceof HTMLElement &&
+        el.querySelectorAll('[style*="aspect-ratio:4/5"]').length >= 3,
+    );
+    const note = looksSection.querySelector('[data-i18n="looksNote"]');
+    if (oldGrid) {
+      oldGrid.outerHTML = `
+        <div class="looks-showcase-grid">
+          <article>
+            <div class="looks-preview looks-preview--cover">
+              <div class="looks-preview__top">Madeniet №1</div>
+              <div class="looks-preview__title">cover</div>
+              <div class="looks-preview__line"></div>
+            </div>
+            <h3>Обложка и первое касание</h3>
+            <p>Партнёр может быть представлен в визуальной системе выпуска без ощущения баннерной рекламы.</p>
+          </article>
+          <article>
+            <div class="looks-preview looks-preview--spread">
+              <div></div><div></div>
+            </div>
+            <h3>Редакционный разворот</h3>
+            <p>Фотосъёмка, интервью, маршруты или спецпроект — формат выглядит как часть журнала.</p>
+          </article>
+          <article>
+            <div class="looks-preview looks-preview--insert">
+              <div class="looks-preview__poster">poster / insert</div>
+            </div>
+            <h3>Вложение или постер</h3>
+            <p>Физический элемент внутри номера: открытка, постер, промокод, стикеры или арт-вкладыш.</p>
+          </article>
+        </div>
+      `;
+    }
+    if (note) {
+      note.innerHTML =
+        "Финальные макеты будут подготовлены после утверждения партнёров, фотосъёмок и общей визуальной концепции выпуска.";
+      note.style.maxWidth = "760px";
+      note.style.lineHeight = "1.5";
+    }
+    looksSection.dataset.polished = "true";
+  }
+
+  // Кнопка медиакита на главной: оставляем понятный путь, куда можно загрузить PDF.
+  root.querySelectorAll('[data-i18n="dlBtn"]').forEach((link) => {
+    link.textContent = "MEDIA KIT · PDF";
+    link.setAttribute("href", "/files/Madeniet_Media_Kit.pdf");
+    link.setAttribute("download", "Madeniet_Media_Kit.pdf");
+  });
+}
+
 function polishHyundaiPage(root) {
   // 1) Rename the second blue section so it sounds like an editorial idea, not a cold email.
   const why = root.querySelector("#why");
@@ -176,6 +291,8 @@ function attachInteractions(root, isHyundai) {
   if (isHyundai) {
     enhanceHyundaiImages(root);
     polishHyundaiPage(root);
+  } else {
+    polishPartnersPage(root);
   }
 
   root
@@ -243,6 +360,7 @@ function Page({ html, isHome = false, isHyundai = false }) {
   return (
     <>
       <main id="page-root" dangerouslySetInnerHTML={{ __html: html }} />
+      {/* {isHome && <PartnerCards />} */}
     </>
   );
 }
@@ -254,25 +372,19 @@ function PartnerCards() {
         <div className="mono muted">personal partner pages</div>
         <h2>Отдельные страницы для партнёров</h2>
         <p>Каждому бренду можно дать свой URL и персональное предложение.</p>
-        <a className="partner-card" href="/madeniet-partners/hyundai">
+        <a className="partner-card" href="/hyundai">
           <span>Hyundai Auto Kazakhstan</span>
-          <b>/madeniet-partners/hyundai →</b>
+          <b>/hyundai →</b>
         </a>
       </div>
     </section>
   );
 }
-
 function App() {
   const path = window.location.pathname.replace(/\/$/, "");
-
-  switch (path) {
-    case "/hyundai":
-      return <Page html={hyundaiHtml} isHyundai />;
-
-    default:
-      return <Page html={partnersHtml} isHome />;
-  }
+  if (path == "/hyundai" || path.endsWith("/madeniet-partners/hyundai"))
+    return <Page html={hyundaiHtml} isHyundai />;
+  return <Page html={partnersHtml} isHome />;
 }
 
 createRoot(document.getElementById("root")).render(<App />);
