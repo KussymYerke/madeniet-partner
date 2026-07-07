@@ -243,7 +243,6 @@ function Page({ html, isHome = false, isHyundai = false }) {
   return (
     <>
       <main id="page-root" dangerouslySetInnerHTML={{ __html: html }} />
-      {isHome && <PartnerCards />}
     </>
   );
 }
