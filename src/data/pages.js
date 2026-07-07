@@ -32,7 +32,7 @@ export const partnersHtml = `
       <div class="home-hero__copy">
         <p data-i18n="heroKicker" class="home-kicker home-kicker--light">madeniet · печатный выпуск №1 · сентябрь 2026</p>
         <h1 data-i18n="heroTitle">Культура Казахстана в печати</h1>
-        <p data-i18n="heroLead" class="home-lead">Первый печатный номер Madeniet: 5000 экземпляров в музеях, магазинах, ресторанах и культурных пространствах Алматы.</p>
+        <p data-i18n="heroLead" class="home-lead">Первый печатный номер Madeniet: 5000 экземпляров разойдутся по музеям, магазинам, ресторанам и культурным пространствам Алматы.</p>
         <div class="home-chip-row">
           <span class="home-chip">5000 экз.</span>
           <span class="home-chip" data-i18n="heroChip1">городская дистрибуция</span>
@@ -48,23 +48,23 @@ export const partnersHtml = `
     <section id="about" class="home-section home-about">
       <div class="home-section-head">
         <p data-i18n="aboutKicker" class="home-kicker">что это</p>
-        <h2 data-i18n="aboutTitle">Не просто медиа-кит, а культурный объект для брендов</h2>
+        <h2 data-i18n="aboutTitle">Не рекламный носитель, а вещь, которую оставляют себе</h2>
       </div>
       <div class="home-about__grid">
         <article>
           <span>01</span>
           <h3 data-i18n="aboutCard1Title">Первый номер</h3>
-          <p data-i18n="aboutCard1Text">Печатный выпуск Madeniet о кино, музыке, моде, стендапе, архивах и людях, которые формируют новую культурную сцену.</p>
+          <p data-i18n="aboutCard1Text">Печатный выпуск Madeniet о кино, музыке, моде, стендапе, архивах и людях, которые делают новую культурную сцену.</p>
         </article>
         <article>
           <span>02</span>
           <h3 data-i18n="aboutCard2Title">5000 экземпляров</h3>
-          <p data-i18n="aboutCard2Text">Тираж увеличен до 5000: это уже не сувенирный выпуск, а заметное офлайн-присутствие в городе.</p>
+          <p data-i18n="aboutCard2Text">Мы подняли тираж до 5000 — это уже не выпуск «для своих», а журнал, который реально видно в городе.</p>
         </article>
         <article>
           <span>03</span>
           <h3 data-i18n="aboutCard3Title">Долго живёт</h3>
-          <p data-i18n="aboutCard3Text">Журнал не исчезает через 24 часа как сторис: его оставляют на столах, забирают домой и сохраняют как вещь.</p>
+          <p data-i18n="aboutCard3Text">Сторис исчезает через сутки. Журнал лежит на столе неделями: его листают гости, забирают домой и ставят на полку.</p>
         </article>
       </div>
     </section>
@@ -73,15 +73,15 @@ export const partnersHtml = `
       <div class="home-section-head">
         <p data-i18n="distributionKicker" class="home-kicker">где будет журнал</p>
         <h2 data-i18n="distributionTitle">Дистрибуция в местах, где культура уже происходит</h2>
-        <p data-i18n="distributionLead">Кликайте по точкам: справа меняется фотография и сценарий контакта с аудиторией.</p>
+        <p data-i18n="distributionLead">Нажмите на любую точку — справа появится фото и то, как журнал встречается с людьми именно там.</p>
       </div>
 
       <div class="distribution-showcase" data-distribution-root>
         <div class="distribution-showcase__tabs">
-          <button class="is-active" type="button" data-distribution-btn data-i18n="distTab1" data-image="/assets/dist-store.jpeg" data-ru-title="магазины и concept stores" data-ru-text="Журнал появляется в магазинах и lifestyle-точках: его можно заметить, взять в руки и забрать как красивый physical-объект." data-kz-title="дүкендер мен concept stores" data-kz-text="Журнал дүкендер мен lifestyle-нүктелерде тарайды: оны байқап, қолға алып, әдемі physical-объект ретінде алып кетуге болады.">магазины</button>
-          <button type="button" data-distribution-btn data-i18n="distTab2" data-image="/assets/dist-abr.jpeg" data-ru-title="рестораны ABR+" data-ru-text="В ресторанной среде журнал работает мягко: его листают за столом, обсуждают и возвращаются к нему без ощущения рекламы." data-kz-title="ABR+ мейрамханалары" data-kz-text="Мейрамхана ортасында журнал жұмсақ жұмыс істейді: оны үстелде қарайды, талқылайды және жарнама сияқты қабылдамайды.">abr+</button>
-          <button type="button" data-distribution-btn data-i18n="distTab3" data-image="/assets/dist-tselinny.png" data-ru-title="Целинный и культурные пространства" data-ru-text="Через культурные площадки журнал попадает к сообществу, которое реально формирует городскую повестку и культурные разговоры." data-kz-title="Целинный және мәдени кеңістіктер" data-kz-text="Мәдени алаңдар арқылы журнал қалалық күн тәртібін және мәдени әңгімелерді қалыптастыратын аудиторияға жетеді.">целинный</button>
-          <button type="button" data-distribution-btn data-i18n="distTab4" data-image="/assets/dist-ama.jpg" data-ru-title="Almaty Museum of Arts" data-ru-text="В музейной среде журнал воспринимается как коллекционный культурный объект, а не как одноразовая рекламная листовка." data-kz-title="Almaty Museum of Arts" data-kz-text="Музей ортасында журнал бір реттік жарнама емес, коллекциялық мәдени объект ретінде қабылданады.">almaty museum of arts</button>
+          <button class="is-active" type="button" data-distribution-btn data-i18n="distTab1" data-image="/assets/dist-store.jpeg" data-ru-title="магазины и concept stores" data-ru-text="Журнал лежит у кассы и на полках рядом с вещами, которые выбирают со вкусом. Его замечают, листают и часто уносят с собой." data-kz-title="дүкендер мен concept stores" data-kz-text="Журнал касса маңында және талғаммен таңдалатын заттардың қасында жатады. Оны байқап, парақтап, жиі өзімен алып кетеді.">магазины</button>
+          <button type="button" data-distribution-btn data-i18n="distTab2" data-image="/assets/dist-abr.jpeg" data-ru-title="рестораны ABR+" data-ru-text="Пока ждут заказ, журнал листают за столом, показывают друг другу страницы — и никто не воспринимает его как рекламу." data-kz-title="ABR+ мейрамханалары" data-kz-text="Тапсырысты күтіп отырғанда журналды үстелде парақтап, бір-біріне көрсетеді — оны ешкім жарнама деп қабылдамайды.">abr+</button>
+          <button type="button" data-distribution-btn data-i18n="distTab3" data-image="/assets/dist-tselinny.png" data-ru-title="Целинный и культурные пространства" data-ru-text="Здесь журнал берут те, кто сам делает культурную жизнь города: кураторы, художники, музыканты и их аудитория." data-kz-title="Целинный және мәдени кеңістіктер" data-kz-text="Мұнда журналды қаланың мәдени өмірін өздері жасайтындар алады: кураторлар, суретшілер, музыканттар және олардың аудиториясы.">целинный</button>
+          <button type="button" data-distribution-btn data-i18n="distTab4" data-image="/assets/dist-ama.jpg" data-ru-title="Almaty Museum of Arts" data-ru-text="Рядом с искусством журнал читается как экспонат: его хочется сохранить, а не выбросить на выходе из музея." data-kz-title="Almaty Museum of Arts" data-kz-text="Өнердің қасында журнал экспонат сияқты оқылады: оны музейден шыға сала тастамай, сақтап қалғысы келеді.">almaty museum of arts</button>
         </div>
 
         <div class="distribution-showcase__preview">
@@ -91,7 +91,7 @@ export const partnersHtml = `
           <div class="distribution-preview__content">
             <span class="distribution-preview__eyebrow" data-i18n="distributionEyebrow">точки распространения</span>
             <h3 id="distribution-title">магазины и concept stores</h3>
-            <p id="distribution-text">Журнал появляется в магазинах и lifestyle-точках: его можно заметить, взять в руки и забрать как красивый physical-объект.</p>
+            <p id="distribution-text">Журнал лежит у кассы и на полках рядом с вещами, которые выбирают со вкусом. Его замечают, листают и часто уносят с собой.</p>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@ export const partnersHtml = `
       <div class="home-section-head">
         <p data-i18n="mockupKicker" class="home-kicker">visual moodboard</p>
         <h2 data-i18n="mockupTitle">Как могут выглядеть страницы будущего номера</h2>
-        <p data-i18n="mockupLead">Референсы на визуальный язык: крупная типографика, открытая сетка, много воздуха и сильные развороты.</p>
+        <p data-i18n="mockupLead">Референсы визуального языка: крупная типографика, открытая сетка, много воздуха и сильные развороты.</p>
       </div>
 
       <div class="home-mood-grid home-mood-grid--balanced home-mood-grid--uniform">
@@ -110,7 +110,7 @@ export const partnersHtml = `
           <div class="home-mood-card__meta">
             <span>01</span>
             <h3 data-i18n="pin1Title">Art research spread</h3>
-            <p data-i18n="pin1Text">Разворот, где текст, архивный объект и цветовая плоскость собираются в исследование героя.</p>
+            <p data-i18n="pin1Text">Разворот, где текст, архивный объект и цветовая плоскость складываются в исследование героя.</p>
           </div>
         </article>
         <article class="home-mood-card">
@@ -118,7 +118,7 @@ export const partnersHtml = `
           <div class="home-mood-card__meta">
             <span>02</span>
             <h3 data-i18n="pin2Title">Object as story</h3>
-            <p data-i18n="pin2Text">Предмет, силуэт и крупная типографика работают как культурный сюжет, а не как обычный рекламный макет.</p>
+            <p data-i18n="pin2Text">Предмет, силуэт и крупная типографика рассказывают культурный сюжет — вместо привычного рекламного макета.</p>
           </div>
         </article>
         <article class="home-mood-card">
@@ -126,7 +126,7 @@ export const partnersHtml = `
           <div class="home-mood-card__meta">
             <span>03</span>
             <h3 data-i18n="pin3Title">Manifest layout</h3>
-            <p data-i18n="pin3Text">Большая цитата, живая фотография и плотная редакционная сетка дают ощущение настоящего журнала.</p>
+            <p data-i18n="pin3Text">Большая цитата, живая фотография и плотная редакционная сетка — ощущение настоящего журнала, а не буклета.</p>
           </div>
         </article>
         <article class="home-mood-card">
@@ -160,7 +160,7 @@ export const partnersHtml = `
       <div class="home-section-head">
         <p data-i18n="formatsKicker" class="home-kicker">форматы партнёрства</p>
         <h2 data-i18n="formatsTitle">Не “рекламная полоса”, а формат внутри культурной истории</h2>
-        <p data-i18n="formatsLead">Фокус — на журнале, макете, спецпроекте, физическом объекте и digital-поддержке.</p>
+        <p data-i18n="formatsLead">Мы не продаём квадратные сантиметры — собираем формат под задачу: журнал, спецпроект, физический объект, digital.</p>
       </div>
 
       <div class="format-list format-list--clean format-list--expanded">
@@ -185,7 +185,7 @@ export const partnersHtml = `
         <article>
           <span>03</span>
           <h3 data-i18n="format3Title">Разворот в номере</h3>
-          <p data-i18n="format3Text">Визуальный разворот или брендированный материал, который выглядит как часть журнала, а не как баннер.</p>
+          <p data-i18n="format3Text">Визуальный разворот или брендированный материал, который читается как часть журнала, а не как баннер.</p>
           <div class="format-card__meta">
             <i data-i18n="format3Meta1">2–4 страницы</i>
             <i data-i18n="format3Meta2">editorial integration</i>
@@ -212,7 +212,7 @@ export const partnersHtml = `
         <article>
           <span>06</span>
           <h3 data-i18n="format6Title">Дистрибуционный пакет</h3>
-          <p data-i18n="format6Text">Отдельный акцент на точках, где журнал будет раздаваться: магазины, музеи, рестораны и культурные пространства.</p>
+          <p data-i18n="format6Text">Отдельный акцент на точках, где журнал окажется в руках: магазины, музеи, рестораны и культурные пространства.</p>
           <div class="format-card__meta">
             <i data-i18n="format6Meta1">5000 экземпляров</i>
             <i data-i18n="format6Meta2">городские точки</i>
@@ -221,7 +221,7 @@ export const partnersHtml = `
         <article>
           <span>07</span>
           <h3 data-i18n="format7Title">QR / промокод</h3>
-          <p data-i18n="format7Text">Интеграция QR, промокода или landing-ссылки внутри печатного материала, чтобы связать offline с digital.</p>
+          <p data-i18n="format7Text">QR, промокод или landing-ссылка внутри печатного материала — чтобы читатель со страницы приходил к бренду.</p>
           <div class="format-card__meta">
             <i data-i18n="format7Meta1">trackable action</i>
             <i data-i18n="format7Meta2">offline → online</i>
@@ -230,7 +230,7 @@ export const partnersHtml = `
         <article>
           <span>08</span>
           <h3 data-i18n="format8Title">Премиальное размещение</h3>
-          <p data-i18n="format8Text">Обложка, гейтфолд, первый разворот или другой заметный формат для брендов, которым нужна максимальная видимость.</p>
+          <p data-i18n="format8Text">Обложка, гейтфолд, первый разворот — самые заметные места номера для брендов, которым важно быть первыми.</p>
           <div class="format-card__meta">
             <i data-i18n="format8Meta1">cover / gatefold</i>
             <i data-i18n="format8Meta2">maximum visibility</i>
@@ -243,7 +243,7 @@ export const partnersHtml = `
       <div class="home-section-head">
         <p data-i18n="priceKicker" class="home-kicker">прайс-лист</p>
         <h2 data-i18n="priceTitle">Выберите позицию — журнал покажет размещение</h2>
-        <p data-i18n="priceLead">Интерактивный прайс: нажмите на строку, и справа подсветится зона в журнале, которую занимает выбранный формат.</p>
+        <p data-i18n="priceLead">Нажмите на строку прайса — справа журнал подсветит, где именно окажется ваш макет.</p>
       </div>
 
       <div class="price-interactive">
@@ -272,7 +272,7 @@ export const partnersHtml = `
           </div>
 
           <div class="price-detail-card">
-            <p id="price-selected-detail">Одна рекламная страница внутри журнала. Подходит для аккуратного имиджевого макета, визуального объявления или короткого бренд-сообщения.</p>
+            <p id="price-selected-detail">Одна рекламная страница внутри журнала. Хорошо работает для аккуратного имиджевого макета или короткого сообщения от бренда.</p>
             <ul id="price-selected-list">
               <li>1 полоса внутри номера</li>
               <li>адаптация макета под стиль журнала</li>
@@ -297,7 +297,7 @@ export const partnersHtml = `
             </div>
             <div class="price-legend">
               <span></span>
-              <p data-i18n="pricePreviewText">Красная зона показывает, какая часть журнала будет занята выбранным форматом.</p>
+              <p data-i18n="pricePreviewText">Красная зона показывает, какую часть журнала займёт выбранный формат.</p>
             </div>
           </div>
         </div>
@@ -308,7 +308,7 @@ export const partnersHtml = `
       <div>
         <p data-i18n="contactKicker" class="home-kicker">контакты</p>
         <h2 data-i18n="contactTitle">Обсудить партнёрство</h2>
-        <p data-i18n="contactLead">Расскажите, какой бренд и какая задача — мы предложим 2–3 формата участия в первом номере.</p>
+        <p data-i18n="contactLead">Напишите пару слов о бренде и задаче — вернёмся с 2–3 вариантами, как войти в первый номер.</p>
       </div>
 
       <div class="contact-card">
@@ -321,4 +321,4 @@ export const partnersHtml = `
     </section>
   </main>
 </div>
-`;
+`
