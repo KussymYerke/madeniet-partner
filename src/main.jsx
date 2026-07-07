@@ -1,70 +1,22 @@
 import React, { useEffect } from "react";
 import { createRoot } from "react-dom/client";
-import { partnersHtml, hyundaiHtml } from "./data/pages";
-import "./styles.css";
+import PartnerPage from "./components/PartnerPage";
+import { partnersHtml } from "./data/pages";
+import { partnerPages } from "./data/partnerPages";
 import { kz } from "./data/i18n";
-import magazineRoutesDraft from "./assets/magazine-routes-draft.png";
+import "./styles.css";
+
 window.__MADI_KZ__ = kz;
 
-const HYUNDAI_ASSETS = {
-  logo: "/assets/hyundai-logo.png",
-  oyu: "/assets/hyundai-oyu.png",
-  bayga: "/assets/bayga-cars.jpg",
-  lab: "/assets/engineering-lab.jpeg",
-  routesDraft: magazineRoutesDraft,
-};
-
-function photoHtml(src, alt, fit = "cover") {
-  return `<img src="${src}" alt="${alt}" class="content-photo" style="object-fit:${fit}" onerror="this.parentElement.innerHTML='<span class=&quot;image-fallback&quot;>${alt}</span>'" />`;
-}
-
-function enhanceHyundaiImages(root) {
-  // 1) replace text Hyundai pills and old logos with real logo image
-  root
-    .querySelectorAll(
-      '.brand-logo.hyundai-logo, img[alt*="Hyundai"], img[src*="Hyundai"]',
-    )
-    .forEach((el) => {
-      if (el.tagName === "IMG") {
-        el.src = HYUNDAI_ASSETS.logo;
-        el.style.objectFit = "contain";
-      } else {
-        el.outerHTML = `<img src="${HYUNDAI_ASSETS.logo}" alt="Hyundai" class="hyundai-real-logo" />`;
-      }
-    });
-
-  // 2) gallery in blue block. In current HTML these are DIV placeholders, not IMG tags.
-  const cards = Array.from(
-    root.querySelectorAll('#why [style*="aspect-ratio:4/5"]'),
-  );
-  const data = [
-    { src: HYUNDAI_ASSETS.oyu, alt: "Hyundai × OYU art car" },
-    {
-      src: HYUNDAI_ASSETS.bayga,
-      alt: "Hyundai автомобили для победителей байги",
-    },
-    { src: HYUNDAI_ASSETS.lab, alt: "Hyundai Engineering Lab" },
-  ];
-
-  cards.slice(0, 3).forEach((card, index) => {
-    card.style.overflow = "hidden";
-    card.innerHTML = photoHtml(data[index].src, data[index].alt);
-  });
-}
-
 function polishPartnersPage(root) {
-  // Home page: make the audience numbers start from zero and animate on scroll.
   root.querySelectorAll("[data-stat]").forEach((el) => {
     if (!el.dataset.homeCountReady) {
       const kind = (el.getAttribute("data-stat") || "0|%").split("|")[1];
-      el.textContent = fmtFactory(
-        localStorage.getItem("madeniet-lang") || "ru",
-      )(0, kind);
+      el.textContent = fmtFactory(localStorage.getItem("madeniet-lang") || "ru")(0, kind);
       el.dataset.homeCountReady = "true";
     }
   });
 
-  // Дополненный блок "Формат" вместо черновых плейсхолдеров.
   const formatTitle = root.querySelector('[data-i18n="fmtTitle"]');
   const formatSection = formatTitle?.closest("section");
   if (formatSection && formatSection.dataset.polished !== "true") {
@@ -78,8 +30,7 @@ function polishPartnersPage(root) {
     }
     if (v2) v2.textContent = "сентябрь 2026";
     if (v3) {
-      v3.textContent =
-        "Alem Comedy Fest, кофейни, концепт-сторы, партнёрские события";
+      v3.textContent = "Alem Comedy Fest, кофейни, концепт-сторы, партнёрские события";
       v3.style.color = "#111";
     }
     if (para) {
@@ -111,7 +62,6 @@ function polishPartnersPage(root) {
     formatSection.dataset.polished = "true";
   }
 
-  // Блок "Как это выглядит" — вместо пустых серых карточек делаем аккуратную витрину форматов.
   const looksTitle = root.querySelector('[data-i18n="looksTitle"]');
   const looksSection = looksTitle?.closest("section");
   if (looksSection && looksSection.dataset.polished !== "true") {
@@ -159,65 +109,6 @@ function polishPartnersPage(root) {
     looksSection.dataset.polished = "true";
   }
 
-  // Кнопка медиакита на главной: оставляем понятный путь, куда можно загрузить PDF.
-  root.querySelectorAll('[data-i18n="dlBtn"]').forEach((link) => {
-    link.textContent = "MEDIA KIT · PDF";
-    link.setAttribute("href", "/files/Madeniet_Media_Kit.pdf");
-    link.setAttribute("download", "Madeniet_Media_Kit.pdf");
-  });
-}
-
-function polishHyundaiPage(root) {
-  // 1) Rename the second blue section so it sounds like an editorial idea, not a cold email.
-  const why = root.querySelector("#why");
-  if (why) {
-    why.classList.add("no-reveal");
-    const title = why.querySelector('[data-i18n="whyTitle"]');
-    const intro = why.querySelector('[data-i18n="whyIntro"]');
-    if (title) title.innerHTML = "Общее видение —";
-    if (intro) {
-      intro.innerHTML =
-        "Культура движения, современный Казахстан и люди, которые его создают. Hyundai уже говорит с этой темой через искусство, образование и локальные инициативы — Madeniet может превратить это в редакционную историю.";
-    }
-  }
-
-  // 2) Remove the old route cards completely and show only one centered concept mockup.
-  const routesSection = root.querySelector("#routes");
-  if (routesSection && routesSection.dataset.conceptReplaced !== "true") {
-    const oldGrid = Array.from(routesSection.children).find((el) => {
-      if (!(el instanceof HTMLElement)) return false;
-      return el.querySelectorAll('[style*="aspect-ratio:4/5"]').length >= 6;
-    });
-
-    const oldNote = routesSection.querySelector('[data-i18n="routesNote"]');
-    if (oldNote) oldNote.remove();
-
-    if (oldGrid) {
-      oldGrid.outerHTML = `
-        <div class="routes-concept-block">
-          <div class="routes-concept-block__eyebrow">EDITORIAL CONCEPT</div>
-          <h3 class="routes-concept-block__title">Как может выглядеть<br/>совместный спецпроект</h3>
-          <p class="routes-concept-block__lead">
-            Концептуальный макет. Финальная версия журнала, фотографии, маршруты,
-            герои и редакционный материал будут разработаны совместно с командой Hyundai.
-          </p>
-          <div class="routes-concept-block__imageWrap">
-            <img src="${HYUNDAI_ASSETS.routesDraft}" alt="Концептуальный макет разворота Madeniet × Hyundai" class="routes-concept-block__image" />
-          </div>
-        </div>
-      `;
-      routesSection.dataset.conceptReplaced = "true";
-    }
-  }
-
-  // 3) Remove the separate cover template placeholder from the issue section.
-  const issuePhoto = root.querySelector('[data-i18n="issuePhoto"]');
-  if (issuePhoto) {
-    const box = issuePhoto.closest('[style*="aspect-ratio:16/8"]');
-    if (box) box.remove();
-  }
-
-  // 4) Make the PDF button a real placeholder path for the file you will upload later.
   root.querySelectorAll('[data-i18n="dlBtn"]').forEach((link) => {
     link.textContent = "MEDIA KIT · PDF";
     link.setAttribute("href", "/files/Madeniet_Media_Kit.pdf");
@@ -253,7 +144,7 @@ function fmtFactory(lang) {
         : Math.round(v) + thousands;
 }
 
-function attachInteractions(root, isHyundai) {
+function attachHomeInteractions(root) {
   let lang = localStorage.getItem("madeniet-lang") || "ru";
   const ruCache = new Map();
   const KZ = window.__MADI_KZ__ || {};
@@ -261,13 +152,9 @@ function attachInteractions(root, isHyundai) {
   function setLang(next) {
     lang = next;
     localStorage.setItem("madeniet-lang", lang);
-    root
-      .querySelectorAll("[data-lang-btn]")
-      .forEach(
-        (btn) =>
-          (btn.style.color =
-            btn.getAttribute("data-lang-btn") === lang ? "#111" : "#888"),
-      );
+    root.querySelectorAll("[data-lang-btn]").forEach((btn) => {
+      btn.style.color = btn.getAttribute("data-lang-btn") === lang ? "#111" : "#888";
+    });
     root.querySelectorAll("[data-i18n]").forEach((el, i) => {
       const key = el.getAttribute("data-i18n");
       if (!ruCache.has(i)) ruCache.set(i, el.innerHTML);
@@ -275,12 +162,9 @@ function attachInteractions(root, isHyundai) {
       if (lang === "ru") el.innerHTML = ruCache.get(i);
     });
     root.querySelectorAll("[data-stat]").forEach((el) => {
-      if (el.dataset.counted !== "true")
-        el.textContent = fmtFactory(lang)(
-          0,
-          (el.getAttribute("data-stat") || "0|%").split("|")[1],
-        );
-      else {
+      if (el.dataset.counted !== "true") {
+        el.textContent = fmtFactory(lang)(0, (el.getAttribute("data-stat") || "0|%").split("|")[1]);
+      } else {
         const [val, kind] = (el.getAttribute("data-stat") || "0|%").split("|");
         el.textContent = fmtFactory(lang)(parseFloat(val), kind);
       }
@@ -288,20 +172,11 @@ function attachInteractions(root, isHyundai) {
     document.documentElement.lang = lang === "kz" ? "kk" : "ru";
   }
 
-  if (isHyundai) {
-    enhanceHyundaiImages(root);
-    polishHyundaiPage(root);
-  } else {
-    polishPartnersPage(root);
-  }
+  polishPartnersPage(root);
 
-  root
-    .querySelectorAll("[data-lang-btn]")
-    .forEach((btn) =>
-      btn.addEventListener("click", () =>
-        setLang(btn.getAttribute("data-lang-btn")),
-      ),
-    );
+  root.querySelectorAll("[data-lang-btn]").forEach((btn) =>
+    btn.addEventListener("click", () => setLang(btn.getAttribute("data-lang-btn"))),
+  );
   setLang(lang);
 
   const modal = root.querySelector("[data-welcome]");
@@ -313,8 +188,7 @@ function attachInteractions(root, isHyundai) {
       setTimeout(() => (modal.style.display = "none"), 320);
     };
     modal.addEventListener("click", (e) => {
-      if (e.target === modal || e.target.closest?.("[data-welcome-close]"))
-        close();
+      if (e.target === modal || e.target.closest?.("[data-welcome-close]")) close();
     });
   }
 
@@ -329,62 +203,44 @@ function attachInteractions(root, isHyundai) {
     }),
   );
 
-  const revealItems = root.querySelectorAll(
-    'section:not(.no-reveal), header, footer, [style*="aspect-ratio"], [data-stat]',
-  );
+  const revealItems = root.querySelectorAll('section:not(.no-reveal), header, footer, [style*="aspect-ratio"], [data-stat]');
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
-          if (entry.target.hasAttribute("data-stat"))
-            countUp(entry.target, lang);
+          if (entry.target.hasAttribute("data-stat")) countUp(entry.target, lang);
         }
       });
     },
     { threshold: 0.15, rootMargin: "0px 0px -5% 0px" },
   );
   revealItems.forEach((el) => {
-    if (el.closest?.("#why") && !el.hasAttribute("data-stat")) return;
     el.classList.add("reveal");
     observer.observe(el);
   });
 }
 
-function Page({ html, isHome = false, isHyundai = false }) {
+function HomePage({ html }) {
   useEffect(() => {
     window.scrollTo(0, 0);
     const root = document.getElementById("page-root");
-    attachInteractions(root, isHyundai);
-  }, [html, isHyundai]);
-  return (
-    <>
-      <main id="page-root" dangerouslySetInnerHTML={{ __html: html }} />
-      {/* {isHome && <PartnerCards />} */}
-    </>
-  );
+    attachHomeInteractions(root);
+  }, [html]);
+
+  return <main id="page-root" dangerouslySetInnerHTML={{ __html: html }} />;
 }
 
-function PartnerCards() {
-  return (
-    <section className="partner-directory">
-      <div className="partner-directory__inner">
-        <div className="mono muted">personal partner pages</div>
-        <h2>Отдельные страницы для партнёров</h2>
-        <p>Каждому бренду можно дать свой URL и персональное предложение.</p>
-        <a className="partner-card" href="/hyundai">
-          <span>Hyundai Auto Kazakhstan</span>
-          <b>/hyundai →</b>
-        </a>
-      </div>
-    </section>
-  );
+function getPartnerFromPath(pathname) {
+  const cleanPath = pathname.replace(/\/$/, "");
+  const slug = cleanPath.split("/").filter(Boolean).at(-1);
+  return partnerPages[slug];
 }
+
 function App() {
-  const path = window.location.pathname.replace(/\/$/, "");
-  if (path == "/hyundai" || path.endsWith("/madeniet-partners/hyundai"))
-    return <Page html={hyundaiHtml} isHyundai />;
-  return <Page html={partnersHtml} isHome />;
+  const partner = getPartnerFromPath(window.location.pathname);
+  if (partner) return <PartnerPage page={partner} />;
+  return <HomePage html={partnersHtml} />;
 }
 
 createRoot(document.getElementById("root")).render(<App />);
