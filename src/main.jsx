@@ -262,11 +262,17 @@ function PartnerCards() {
     </section>
   );
 }
+
 function App() {
   const path = window.location.pathname.replace(/\/$/, "");
-  if (path.endsWith("/madeniet-partners/hyundai"))
-    return <Page html={hyundaiHtml} isHyundai />;
-  return <Page html={partnersHtml} isHome />;
+
+  switch (path) {
+    case "/hyundai":
+      return <Page html={hyundaiHtml} isHyundai />;
+
+    default:
+      return <Page html={partnersHtml} isHome />;
+  }
 }
 
 createRoot(document.getElementById("root")).render(<App />);
