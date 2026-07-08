@@ -8,200 +8,403 @@ import "./styles.css";
 
 window.__MADI_KZ__ = kz;
 
+const PRICE_POSITIONS = [
+  {
+    "id": "vnutrennyaya-polosa",
+    "titleRu": "Внутренняя полоса",
+    "titleKz": "Ішкі бет",
+    "titleEn": "Inner page",
+    "price": "300 000 ₸",
+    "zone": "inner-page",
+    "state": "open",
+    "detailRu": "Одна рекламная страница внутри журнала. Подходит для аккуратного имиджевого макета, визуального объявления или короткого бренд-сообщения.",
+    "detailKz": "Журнал ішіндегі бір жарнамалық бет. Имидждік макетке, визуалды хабарламаға немесе қысқа бренд-коммуникацияға ыңғайлы.",
+    "bulletsRu": [
+      "1 полоса внутри номера",
+      "можно добавить QR или промокод",
+      "точечное и понятное размещение"
+    ],
+    "bulletsKz": [
+      "нөмір ішіндегі 1 бет",
+      "QR немесе промокод қосуға болады",
+      "нысаналы және түсінікті орналастыру"
+    ]
+  },
+  {
+    "id": "soderzhanie-vyhodnye",
+    "titleRu": "Содержание / Выходные данные",
+    "titleKz": "Мазмұн / шығу деректері",
+    "titleEn": "Contents / Credits",
+    "price": "350 000 ₸",
+    "zone": "contents",
+    "state": "open",
+    "detailRu": "Полоса рядом со страницей содержания или выходными данными. Это компактный формат в навигационной части журнала.",
+    "detailKz": "Мазмұн немесе шығу деректері бетінің жанындағы орын. Журналдың навигациялық бөлігіндегі ықшам формат.",
+    "bulletsRu": [
+      "рядом с содержанием",
+      "видно в начале читательского пути",
+      "компактное бренд-присутствие"
+    ],
+    "bulletsKz": [
+      "мазмұн жанында",
+      "оқырман жолының басында көрінеді",
+      "ықшам бренд-қатысу"
+    ]
+  },
+  {
+    "id": "pismo-redaktora",
+    "titleRu": "Письмо редактора",
+    "titleKz": "Редактор хаты",
+    "titleEn": "Editor's letter",
+    "price": "450 000 ₸",
+    "zone": "editor-letter",
+    "state": "open",
+    "detailRu": "Полоса рядом с колонкой редактора. Хороша для бренда, которому важно звучать рядом с миссией и тоном выпуска.",
+    "detailKz": "Редактор бағанының жанындағы бет. Брендтің миссия және шығарылым тонымен қатар көрінуіне ыңғайлы.",
+    "bulletsRu": [
+      "позиция рядом с editorial-вступлением",
+      "подходит для ценностей и манифеста",
+      "мягкое культурное присутствие"
+    ],
+    "bulletsKz": [
+      "editorial кіріспе жанындағы позиция",
+      "құндылықтар мен манифестке ыңғайлы",
+      "жұмсақ мәдени қатысу"
+    ]
+  },
+  {
+    "id": "insert",
+    "titleRu": "Инсерт",
+    "titleKz": "Инсерт",
+    "titleEn": "Insert",
+    "price": "500 000 ₸",
+    "zone": "insert",
+    "state": "insert",
+    "detailRu": "Вложенный или вклеенный лист: карточка, купон, мини-постер, промокод или другой физический элемент между страницами.",
+    "detailKz": "Беттер арасына салынатын немесе жапсырылатын парақ: карточка, купон, мини-постер, промокод немесе басқа physical-элемент.",
+    "bulletsRu": [
+      "отдельный элемент между страницами",
+      "можно вынуть, сохранить или использовать",
+      "лучше всего для QR, промо, приглашения или collectible"
+    ],
+    "bulletsKz": [
+      "беттер арасындағы жеке элемент",
+      "алып, сақтап немесе қолдануға болады",
+      "QR, промо, шақыру немесе collectible үшін жақсы"
+    ]
+  },
+  {
+    "id": "vnutrennij-razvorot",
+    "titleRu": "Внутренний разворот",
+    "titleKz": "Ішкі жайылма",
+    "titleEn": "Inner spread",
+    "price": "600 000 ₸",
+    "zone": "inner-spread",
+    "state": "open",
+    "detailRu": "Разворот в середине блока. Подходит для полноценной истории бренда, фотосъёмки или редакционного материала.",
+    "detailKz": "Блоктың ортасындағы жайылма. Толық бренд хикаясына, фотосессияға немесе редакциялық материалға ыңғайлы.",
+    "bulletsRu": [
+      "2 соседние страницы",
+      "середина журнального блока",
+      "хорошо для спецматериала"
+    ],
+    "bulletsKz": [
+      "қатар тұрған 2 бет",
+      "журнал блогының ортасы",
+      "спецматериалға жақсы"
+    ]
+  },
+  {
+    "id": "premialnyj-razvorot",
+    "titleRu": "Премиальный разворот",
+    "titleKz": "Премиум жайылма",
+    "titleEn": "Premium spread",
+    "price": "800 000 ₸",
+    "zone": "premium-spread",
+    "state": "open",
+    "detailRu": "Разворот в первой трети журнала. Дает крупную площадь, сильный визуальный эффект и премиальное ощущение без обложечной цены.",
+    "detailKz": "Журналдың алғашқы үштен біріндегі жайылма. Үлкен аумақ, күшті визуалды әсер және премиум сезім береді.",
+    "bulletsRu": [
+      "2 страницы в первой трети номера",
+      "много места для фото и текста",
+      "подходит для fashion, auto, bank, tech"
+    ],
+    "bulletsKz": [
+      "нөмірдің алғашқы үштен біріндегі 2 бет",
+      "фото мен мәтінге көп орын",
+      "fashion, auto, bank, tech үшін ыңғайлы"
+    ]
+  },
+  {
+    "id": "tretij-razvorot",
+    "titleRu": "Третий разворот",
+    "titleKz": "Үшінші жайылма",
+    "titleEn": "Third spread",
+    "price": "950 000 ₸",
+    "zone": "third-spread",
+    "state": "open",
+    "detailRu": "Третий разворот после открытия номера. Сохраняет раннюю видимость, но стоит мягче первых позиций.",
+    "detailKz": "Нөмір ашылғаннан кейінгі үшінші жайылма. Ерте көрінімді сақтайды, бірақ алғашқы позициялардан жұмсағырақ.",
+    "bulletsRu": [
+      "2 страницы",
+      "ранняя часть журнала",
+      "подходит для визуального материала"
+    ],
+    "bulletsKz": [
+      "2 бет",
+      "журналдың ерте бөлігі",
+      "визуалды материалға ыңғайлы"
+    ]
+  },
+  {
+    "id": "vtoroj-razvorot",
+    "titleRu": "Второй разворот",
+    "titleKz": "Екінші жайылма",
+    "titleEn": "Second spread",
+    "price": "1 100 000 ₸",
+    "zone": "second-spread",
+    "state": "open",
+    "detailRu": "Второй разворот в начале журнала. Хороший баланс заметности и стоимости для имиджевого размещения.",
+    "detailKz": "Журналдың басындағы екінші жайылма. Имидждік орналастыру үшін көрінім мен бағаның жақсы балансы.",
+    "bulletsRu": [
+      "2 страницы в начале номера",
+      "высокая заметность",
+      "баланс стоимости и статуса"
+    ],
+    "bulletsKz": [
+      "нөмір басындағы 2 бет",
+      "жоғары көрінім",
+      "баға мен статус балансы"
+    ]
+  },
+  {
+    "id": "tretya-oblozhka",
+    "titleRu": "Третья обложка",
+    "titleKz": "Үшінші мұқаба",
+    "titleEn": "Inside back cover",
+    "price": "1 400 000 ₸",
+    "zone": "cover-inside-back",
+    "state": "open",
+    "detailRu": "Внутренняя сторона задней обложки. Премиальная позиция в финальной части журнала, которую видят перед закрытием номера.",
+    "detailKz": "Артқы мұқабаның ішкі жағы. Журналды жабар алдында көрінетін финал бөліктегі премиум позиция.",
+    "bulletsRu": [
+      "внутренняя сторона задней обложки",
+      "премиальный статус",
+      "подходит для сильного финального контакта"
+    ],
+    "bulletsKz": [
+      "артқы мұқабаның ішкі жағы",
+      "премиум статус",
+      "күшті финалдық контактқа ыңғайлы"
+    ]
+  },
+  {
+    "id": "pervyj-razvorot",
+    "titleRu": "Первый разворот",
+    "titleKz": "Бірінші жайылма",
+    "titleEn": "First spread",
+    "price": "1 500 000 ₸",
+    "zone": "first-spread",
+    "state": "open",
+    "detailRu": "Первый крупный разворот после обложки. Работает как большой вход бренда в номер и даёт максимальный ранний контакт.",
+    "detailKz": "Мұқабадан кейінгі алғашқы ірі жайылма. Брендтің нөмірге үлкен кіруі сияқты жұмыс істейді.",
+    "bulletsRu": [
+      "2 соседние страницы",
+      "самый ранний разворот",
+      "подходит для ключевого партнёра"
+    ],
+    "bulletsKz": [
+      "қатар тұрған 2 бет",
+      "ең ерте жайылма",
+      "негізгі серіктеске ыңғайлы"
+    ]
+  },
+  {
+    "id": "chetvertaya-oblozhka",
+    "titleRu": "Четвертая обложка",
+    "titleKz": "Төртінші мұқаба",
+    "titleEn": "Back cover",
+    "price": "1 700 000 ₸",
+    "zone": "cover-back",
+    "state": "closed",
+    "detailRu": "Задняя обложка журнала. Внешняя поверхность, которая видна до и после чтения, хорошо работает как самостоятельный бренд-постер.",
+    "detailKz": "Журналдың артқы мұқабасы. Оқуға дейін де, кейін де көрінетін сыртқы бет, жеке бренд-постер ретінде жақсы жұмыс істейді.",
+    "bulletsRu": [
+      "наружная задняя обложка",
+      "видна в стопках и на столах",
+      "сильный standalone-формат"
+    ],
+    "bulletsKz": [
+      "сыртқы артқы мұқаба",
+      "үстелдерде және стопкада көрінеді",
+      "күшті standalone-формат"
+    ]
+  },
+  {
+    "id": "gatefold-na-oblozhke",
+    "titleRu": "Гейтфолд на обложке",
+    "titleKz": "Мұқабадағы гейтфолд",
+    "titleEn": "Cover gatefold",
+    "price": "1 850 000 ₸",
+    "zone": "gatefold",
+    "state": "gatefold",
+    "detailRu": "Раскладывающаяся створка обложки. Даёт вау-эффект, больше площади и ощущение специального выпуска.",
+    "detailKz": "Мұқабада ашылатын қосымша створка. Вау-әсер, үлкен аумақ және арнайы шығарылым сезімін береді.",
+    "bulletsRu": [
+      "раскрывающаяся дополнительная поверхность",
+      "самая эффектная механика",
+      "подходит для запуска или большой кампании"
+    ],
+    "bulletsKz": [
+      "ашылатын қосымша бет",
+      "ең әсерлі механика",
+      "запуск немесе үлкен кампанияға ыңғайлы"
+    ]
+  },
+  {
+    "id": "pervaya-oblozhka",
+    "titleRu": "Первая обложка",
+    "titleKz": "Бірінші мұқаба",
+    "titleEn": "Front cover",
+    "price": "2 000 000 ₸",
+    "zone": "cover-front",
+    "state": "closed",
+    "detailRu": "Лицевая обложка журнала. Самая заметная и премиальная позиция: именно она формирует первое впечатление о выпуске.",
+    "detailKz": "Журналдың алдыңғы мұқабасы. Ең көрінетін және премиум позиция: шығарылым туралы алғашқы әсерді қалыптастырады.",
+    "bulletsRu": [
+      "главная внешняя поверхность журнала",
+      "максимальный первый контакт",
+      "подходит для крупного имиджевого запуска"
+    ],
+    "bulletsKz": [
+      "журналдың негізгі сыртқы беті",
+      "ең жоғары алғашқы контакт",
+      "ірі имидждік запускқа ыңғайлы"
+    ]
+  },
+  {
+    "id": "specproekt",
+    "titleRu": "Спецпроект",
+    "titleKz": "Спецжоба",
+    "titleEn": "Special project",
+    "price": "по запросу",
+    "zone": "special",
+    "state": "open",
+    "detailRu": "Кастомный формат под задачу бренда: редакционный материал, съёмка, серия касаний, QR, промокод или нестандартная печатная механика.",
+    "detailKz": "Бренд міндетіне арналған кастом формат: редакциялық материал, түсірілім, бірнеше жанасу, QR, промокод немесе стандарттан тыс print-механика.",
+    "bulletsRu": [
+      "идея и структура под бренд",
+      "может включать print + digital",
+      "стоимость считается после концепта"
+    ],
+    "bulletsKz": [
+      "идея мен құрылым брендке сай",
+      "print + digital қамтуы мүмкін",
+      "баға концептіден кейін есептеледі"
+    ]
+  }
+];
+
 function attachHomeInteractions(root) {
   if (!root) return () => {};
 
   let lang = localStorage.getItem("madeniet-lang") || "ru";
+  let selectedPriceId = "vnutrennyaya-polosa";
+  let previewPriceId = selectedPriceId;
   const ruCache = new Map();
   const KZ = window.__MADI_KZ__ || {};
   const cleanups = [];
 
   const header = root.querySelector(".home-header");
   const burger = root.querySelector(".home-burger");
-  const homeNav = root.querySelector(".home-nav");
   const distributionButtons = Array.from(root.querySelectorAll("[data-distribution-btn]"));
   const distributionImage = root.querySelector("#distribution-image");
   const distributionTitle = root.querySelector("#distribution-title");
   const distributionText = root.querySelector("#distribution-text");
 
-  const priceRows = Array.from(root.querySelectorAll("[data-price-row]"));
-  const priceMagazine = root.querySelector("[data-price-magazine]");
-  const priceSelectedTitle = root.querySelector("#price-selected-title");
-  const priceSelectedValue = root.querySelector("#price-selected-value");
-  const priceSelectedDetail = root.querySelector("#price-selected-detail");
-  const priceSelectedList = root.querySelector("#price-selected-list");
-  const pricePlacementLabel = root.querySelector("#price-placement-label");
+  const priceList = root.querySelector("[data-price-list]");
+  const pricePreview = root.querySelector("[data-magazine-preview]");
+  const priceTitle = root.querySelector("#price-selected-title");
+  const priceValue = root.querySelector("#price-selected-value");
+  const priceDetail = root.querySelector("#price-selected-detail");
+  const priceListItems = root.querySelector("#price-selected-list");
+  const priceBadge = root.querySelector("#price-selected-badge");
 
-  const PRICE_DETAILS = {
-    inner: {
-      ru: {
-        title: "Внутренняя полоса",
-        detail: "Одна рекламная страница внутри журнала. Подходит для аккуратного имиджевого макета, визуального объявления или короткого бренд-сообщения.",
-        items: ["1 полоса внутри номера", "адаптация макета под стиль журнала", "подходит для QR, промокода или имиджевого сообщения"]
-      },
-      kz: {
-        title: "Ішкі бет",
-        detail: "Журнал ішіндегі бір жарнамалық бет. Имидждік макетке, визуалды хабарламаға немесе қысқа бренд-коммуникацияға ыңғайлы.",
-        items: ["нөмір ішіндегі 1 бет", "макетті журнал стиліне бейімдеу", "QR, промокод немесе имидждік хабарламаға ыңғайлы"]
-      }
-    },
-    contents: {
-      ru: {
-        title: "Содержание / выходные данные",
-        detail: "Позиция рядом с навигационной частью журнала. Хорошо работает для короткого бренд-присутствия, которое читатель видит в начале номера.",
-        items: ["размещение рядом с содержанием или выходными данными", "высокая вероятность первого контакта", "компактный формат без перегруза"]
-      },
-      kz: {
-        title: "Мазмұн / шығу деректері",
-        detail: "Журналдың навигациялық бөлігінің жанындағы позиция. Оқырман нөмірдің басында көретін қысқа бренд-қатысуға ыңғайлы.",
-        items: ["мазмұн немесе шығу деректері жанында", "алғашқы контакт ықтималдығы жоғары", "ықшам формат"]
-      }
-    },
-    editor: {
-      ru: {
-        title: "Письмо редактора",
-        detail: "Размещение рядом с редакционным вступлением. Подходит бренду, которому важно выглядеть частью общего культурного разговора.",
-        items: ["контекст рядом с editorial-вступлением", "спокойное имиджевое присутствие", "хорошо для миссии, манифеста или ценностей"]
-      },
-      kz: {
-        title: "Редактор хаты",
-        detail: "Редакциялық кіріспе жанындағы орналастыру. Брендтің мәдени әңгімеге табиғи түрде кіруіне ыңғайлы.",
-        items: ["editorial кіріспе жанындағы контекст", "имидждік жұмсақ қатысу", "миссия немесе құндылықтар үшін жақсы"]
-      }
-    },
-    insert: {
-      ru: {
-        title: "Инсерт",
-        detail: "Отдельный физический лист, карточка, купон, мини-постер или промо-объект, вложенный внутрь журнала. Его можно вынуть, сохранить, подарить или использовать.",
-        items: ["физический объект внутри журнала", "можно добавить QR, промокод или карту", "лучше всего для промо, приглашения, постера или collectible-механики"]
-      },
-      kz: {
-        title: "Инсерт",
-        detail: "Журнал ішіне салынатын жеке парақ, карточка, купон, мини-постер немесе промо-объект. Оны алып, сақтап, сыйлап немесе қолдануға болады.",
-        items: ["журнал ішіндегі физикалық объект", "QR, промокод немесе карта қосуға болады", "промо, шақыру, постер немесе collectible-механикаға ыңғайлы"]
-      }
-    },
-    spread: {
-      ru: {
-        title: "Внутренний разворот",
-        detail: "Две соседние страницы, которые дают больше воздуха для фотографии, текста, истории бренда и визуальной композиции.",
-        items: ["2 страницы рядом", "подходит для фотосъёмки или спецматериала", "сильнее обычной полосы по визуальному эффекту"]
-      },
-      kz: {
-        title: "Ішкі жайылма",
-        detail: "Екі қатар бет: фотоға, мәтінге, бренд тарихына және визуалды композицияға көбірек ауа береді.",
-        items: ["қатар тұрған 2 бет", "фотосессия немесе спецматериалға ыңғайлы", "бір бетке қарағанда визуалды әсері күшті"]
-      }
-    },
-    "premium-spread": {
-      ru: {
-        title: "Премиальный разворот",
-        detail: "Акцентный разворот с лучшей позицией внутри номера. Хорош для брендов, которым нужна крупная и дорогая подача.",
-        items: ["2 страницы в заметной части номера", "приоритетная визуальная подача", "подходит для fashion, auto, lifestyle, tech и банков"]
-      },
-      kz: {
-        title: "Премиум жайылма",
-        detail: "Нөмір ішіндегі ең акцентті жайылмалардың бірі. Брендті ірі және қымбат көрсеткісі келетіндерге лайық.",
-        items: ["нөмірдің көрінетін бөлігіндегі 2 бет", "басым визуалды подача", "fashion, auto, lifestyle, tech және банктерге ыңғайлы"]
-      }
-    },
-    "third-spread": {
-      ru: {
-        title: "Третий разворот",
-        detail: "Один из ранних разворотов после открытия номера. Дает хорошую видимость без стоимости первых позиций.",
-        items: ["2 страницы", "ранняя часть журнала", "баланс стоимости и заметности"]
-      },
-      kz: {
-        title: "Үшінші жайылма",
-        detail: "Нөмірдің ашылуынан кейінгі ерте жайылмалардың бірі. Алғашқы позиция бағасынсыз жақсы көрінім береді.",
-        items: ["2 бет", "журналдың ерте бөлігі", "баға мен көрінім балансы"]
-      }
-    },
-    "second-spread": {
-      ru: {
-        title: "Второй разворот",
-        detail: "Очень заметный ранний разворот. Подходит для бренда, который хочет быть рядом с началом читательского пути.",
-        items: ["2 страницы в начале номера", "высокая заметность", "подходит для имиджевого запуска"]
-      },
-      kz: {
-        title: "Екінші жайылма",
-        detail: "Өте көрінетін ерте жайылма. Оқырман жолының басында болғысы келетін брендке ыңғайлы.",
-        items: ["нөмір басындағы 2 бет", "жоғары көрінім", "имидждік запускқа ыңғайлы"]
-      }
-    },
-    "first-spread": {
-      ru: {
-        title: "Первый разворот",
-        detail: "Одна из самых сильных позиций после открытия журнала. Работает как большой вход бренда в номер.",
-        items: ["первый крупный разворот", "максимальный ранний контакт", "подходит для ключевого партнёра"]
-      },
-      kz: {
-        title: "Бірінші жайылма",
-        detail: "Журнал ашылғаннан кейінгі ең күшті позициялардың бірі. Брендтің нөмірге үлкен кіруі сияқты жұмыс істейді.",
-        items: ["алғашқы ірі жайылма", "ең ерте күшті контакт", "негізгі серіктеске ыңғайлы"]
-      }
-    },
-    cover3: {
-      ru: {
-        title: "Третья обложка",
-        detail: "Внутренняя сторона задней обложки. Премиальная позиция, которую видят при закрытии журнала.",
-        items: ["внутренняя сторона обложки", "премиальный статус", "хорошо для имиджевой рекламы"]
-      },
-      kz: {
-        title: "Үшінші мұқаба",
-        detail: "Артқы мұқабаның ішкі жағы. Журнал жабылғанда көрінетін премиум позиция.",
-        items: ["мұқабаның ішкі жағы", "премиум статус", "имидждік жарнамаға ыңғайлы"]
-      }
-    },
-    cover4: {
-      ru: {
-        title: "Четвёртая обложка",
-        detail: "Задняя обложка журнала. Самая внешняя и заметная поверхность после первой обложки.",
-        items: ["наружная задняя обложка", "видна до и после чтения", "сильный standalone-формат"]
-      },
-      kz: {
-        title: "Төртінші мұқаба",
-        detail: "Журналдың артқы мұқабасы. Бірінші мұқабадан кейінгі ең сыртқы және көрінетін бет.",
-        items: ["сыртқы артқы мұқаба", "оқуға дейін де, кейін де көрінеді", "күшті standalone-формат"]
-      }
-    },
-    gatefold: {
-      ru: {
-        title: "Гейтфолд на обложке",
-        detail: "Раскрывающийся блок на обложке. Дает вау-эффект, больше площади и ощущение специального выпуска.",
-        items: ["дополнительная раскрывающаяся поверхность", "максимальная площадь", "лучше всего для громкой кампании или запуска"]
-      },
-      kz: {
-        title: "Мұқабадағы гейтфолд",
-        detail: "Мұқабада ашылатын қосымша блок. Вау-әсер, көбірек аумақ және арнайы шығарылым сезімін береді.",
-        items: ["ашылатын қосымша бет", "ең үлкен аумақ", "ірі кампания немесе запускқа жақсы"]
-      }
-    },
-    cover1: {
-      ru: {
-        title: "Первая обложка",
-        detail: "Главная внешняя поверхность журнала. Максимально премиальная позиция, которая формирует первое впечатление.",
-        items: ["главная обложка", "самый высокий статус", "максимальный первый контакт"]
-      },
-      kz: {
-        title: "Бірінші мұқаба",
-        detail: "Журналдың негізгі сыртқы беті. Алғашқы әсерді қалыптастыратын ең премиум позиция.",
-        items: ["негізгі мұқаба", "ең жоғары статус", "максималды алғашқы контакт"]
-      }
-    },
-    special: {
-      ru: {
-        title: "Спецпроект",
-        detail: "Кастомный формат под задачу бренда: редакционный материал, фотосъёмка, офлайн-механика, QR, промокод или серия касаний.",
-        items: ["идея и структура под бренд", "может включать печать + digital", "стоимость считается после концепта"]
-      },
-      kz: {
-        title: "Спецжоба",
-        detail: "Бренд міндетіне арналған кастом формат: редакциялық материал, фотосессия, офлайн-механика, QR, промокод немесе бірнеше жанасу.",
-        items: ["идея мен құрылым брендке сай", "print + digital қамтуы мүмкін", "баға концептіден кейін есептеледі"]
-      }
+  function getPrice(id) {
+    return PRICE_POSITIONS.find((item) => item.id === id) || PRICE_POSITIONS.find((item) => item.id === "vnutrennyaya-polosa") || PRICE_POSITIONS[0];
+  }
+
+  function getLocalized(item) {
+    return {
+      title: lang === "kz" ? item.titleKz : item.titleRu,
+      detail: lang === "kz" ? item.detailKz : item.detailRu,
+      bullets: lang === "kz" ? item.bulletsKz : item.bulletsRu
+    };
+  }
+
+  function renderPriceList() {
+    if (!priceList) return;
+    priceList.innerHTML = PRICE_POSITIONS.map((item) => {
+      const localized = getLocalized(item);
+      const active = item.id === selectedPriceId ? " is-active" : "";
+      const preview = item.id === previewPriceId ? " is-preview" : "";
+      return `
+        <button class="price-row-v2${active}${preview}" type="button" data-price-id="${item.id}" data-zone="${item.zone}">
+          <span class="price-row-v2__title">${localized.title}</span>
+          <span class="price-row-v2__zone">${item.titleEn}</span>
+          <b>${item.price}</b>
+        </button>
+      `;
+    }).join("");
+  }
+
+  function updatePricePreview(id, mode = "selected") {
+    const item = getPrice(id);
+    if (!item || !pricePreview) return;
+    const localized = getLocalized(item);
+    previewPriceId = item.id;
+
+    pricePreview.dataset.state = item.state;
+    pricePreview.dataset.zone = item.zone;
+    pricePreview.dataset.priceId = item.id;
+    if (priceTitle) priceTitle.textContent = localized.title;
+    if (priceValue) priceValue.textContent = item.price;
+    if (priceDetail) priceDetail.textContent = localized.detail;
+    if (priceBadge) priceBadge.textContent = mode === "hover" ? (lang === "kz" ? "қарап жатырсыз" : "предпросмотр") : (lang === "kz" ? "таңдалды" : "выбрано");
+    if (priceListItems) {
+      priceListItems.innerHTML = localized.bullets.map((bullet) => `<li>${bullet}</li>`).join("");
     }
-  };
+
+    root.querySelectorAll("[data-price-id]").forEach((row) => {
+      row.classList.toggle("is-active", row.dataset.priceId === selectedPriceId);
+      row.classList.toggle("is-preview", row.dataset.priceId === previewPriceId);
+    });
+  }
+
+  function initPriceInteractions() {
+    renderPriceList();
+    root.querySelectorAll("[data-price-id]").forEach((row) => {
+      const onEnter = () => updatePricePreview(row.dataset.priceId, "hover");
+      const onLeave = () => updatePricePreview(selectedPriceId, "selected");
+      const onClick = () => {
+        selectedPriceId = row.dataset.priceId;
+        updatePricePreview(selectedPriceId, "selected");
+      };
+      row.addEventListener("mouseenter", onEnter);
+      row.addEventListener("mouseleave", onLeave);
+      row.addEventListener("focus", onEnter);
+      row.addEventListener("blur", onLeave);
+      row.addEventListener("click", onClick);
+      cleanups.push(() => {
+        row.removeEventListener("mouseenter", onEnter);
+        row.removeEventListener("mouseleave", onLeave);
+        row.removeEventListener("focus", onEnter);
+        row.removeEventListener("blur", onLeave);
+        row.removeEventListener("click", onClick);
+      });
+    });
+    updatePricePreview(selectedPriceId, "selected");
+  }
 
   function updateHeaderState() {
     if (!header) return;
@@ -229,24 +432,6 @@ function attachHomeInteractions(root) {
     distributionText.textContent = lang === "kz" ? activeButton.dataset.kzText : activeButton.dataset.ruText;
   }
 
-  function updatePrice(activeRow) {
-    if (!activeRow || !priceMagazine || !priceSelectedTitle || !priceSelectedValue) return;
-    const placement = activeRow.dataset.placement || "inner";
-    const details = PRICE_DETAILS[placement] || PRICE_DETAILS.inner;
-    const localized = details[lang] || details.ru;
-
-    priceRows.forEach((row) => row.classList.toggle("is-active", row === activeRow));
-    priceMagazine.setAttribute("data-placement", placement);
-    priceSelectedTitle.textContent = lang === "kz" ? activeRow.dataset.kzTitle : activeRow.dataset.ruTitle;
-    priceSelectedValue.textContent = activeRow.dataset.price || "";
-
-    if (priceSelectedDetail) priceSelectedDetail.textContent = localized.detail;
-    if (pricePlacementLabel) pricePlacementLabel.textContent = localized.title;
-    if (priceSelectedList) {
-      priceSelectedList.innerHTML = localized.items.map((item) => `<li>${item}</li>`).join("");
-    }
-  }
-
   function setLang(next) {
     lang = next;
     localStorage.setItem("madeniet-lang", lang);
@@ -265,7 +450,8 @@ function attachHomeInteractions(root) {
     });
 
     updateDistribution(root.querySelector("[data-distribution-btn].is-active") || distributionButtons[0]);
-    updatePrice(root.querySelector("[data-price-row].is-active") || priceRows[0]);
+    renderPriceList();
+    initPriceInteractions();
   }
 
   root.querySelectorAll("[data-lang-btn]").forEach((btn) => {
@@ -302,12 +488,6 @@ function attachHomeInteractions(root) {
     cleanups.push(() => button.removeEventListener("click", onClick));
   });
 
-  priceRows.forEach((row) => {
-    const onClick = () => updatePrice(row);
-    row.addEventListener("click", onClick);
-    cleanups.push(() => row.removeEventListener("click", onClick));
-  });
-
   const onScroll = () => updateHeaderState();
   const onResize = () => updateHeaderState();
   window.addEventListener("scroll", onScroll, { passive: true });
@@ -318,7 +498,7 @@ function attachHomeInteractions(root) {
   setLang(lang);
   updateHeaderState();
   updateDistribution(root.querySelector("[data-distribution-btn].is-active") || distributionButtons[0]);
-  updatePrice(root.querySelector("[data-price-row].is-active") || priceRows[0]);
+  initPriceInteractions();
 
   return () => {
     cleanups.forEach((cleanup) => cleanup());

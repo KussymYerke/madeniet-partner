@@ -6724,3 +6724,628 @@ body {
     right: 10px;
   }
 }
+
+
+/* === PREMIUM INTERACTIVE PRICE LIST + MAGAZINE PREVIEW === */
+.home-price--premium {
+  background: #050505;
+  color: #fff;
+  width: 100% !important;
+  max-width: none !important;
+  padding-left: max(20px, calc((100vw - 1180px) / 2)) !important;
+  padding-right: max(20px, calc((100vw - 1180px) / 2)) !important;
+  border-top: 0 !important;
+}
+
+.home-price--premium .home-kicker,
+.home-price--premium .home-section-head p:not(.home-kicker) {
+  color: rgba(255,255,255,.64) !important;
+}
+
+.home-price--premium .home-section-head h2 {
+  color: #fff;
+}
+
+.price-shell {
+  display: grid;
+  grid-template-columns: minmax(360px, .92fr) minmax(460px, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.price-list-panel,
+.magazine-preview {
+  border: 1px solid rgba(255,255,255,.16);
+  background: rgba(255,255,255,.035);
+  border-radius: 32px;
+  box-shadow: 0 30px 90px rgba(0,0,0,.28);
+}
+
+.price-list-panel {
+  overflow: hidden;
+}
+
+.price-list-panel__top {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px 18px;
+  border-bottom: 1px solid rgba(255,255,255,.14);
+}
+
+.price-list-panel__top span {
+  font: 500 12px/1 "IBM Plex Mono", monospace;
+  color: rgba(255,255,255,.58);
+  letter-spacing: .06em;
+}
+
+.price-list-panel__top b {
+  font-size: 34px;
+  line-height: .9;
+  letter-spacing: -.06em;
+}
+
+.price-table-v2 {
+  display: grid;
+}
+
+.price-row-v2 {
+  width: 100%;
+  min-height: 62px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 126px;
+  grid-template-areas:
+    "title price"
+    "zone price";
+  gap: 4px 18px;
+  align-items: center;
+  text-align: left;
+  border: 0;
+  border-bottom: 1px solid rgba(255,255,255,.13);
+  background: transparent;
+  color: rgba(255,255,255,.88);
+  padding: 15px 24px;
+  cursor: pointer;
+  position: relative;
+  transition:
+    background .25s ease,
+    color .25s ease,
+    transform .25s ease,
+    padding-left .25s ease;
+}
+
+.price-row-v2:last-child {
+  border-bottom: 0;
+}
+
+.price-row-v2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 14px;
+  bottom: 14px;
+  width: 3px;
+  border-radius: 999px;
+  background: #E53935;
+  opacity: 0;
+  transition: opacity .25s ease;
+}
+
+.price-row-v2__title {
+  grid-area: title;
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.price-row-v2__zone {
+  grid-area: zone;
+  font: 500 11px/1 "IBM Plex Mono", monospace;
+  color: rgba(255,255,255,.42);
+  letter-spacing: .04em;
+  text-transform: lowercase;
+}
+
+.price-row-v2 b {
+  grid-area: price;
+  justify-self: end;
+  color: rgba(255,255,255,.82);
+  font-weight: 520;
+  white-space: nowrap;
+}
+
+.price-row-v2:hover,
+.price-row-v2.is-preview {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  padding-left: 30px;
+}
+
+.price-row-v2.is-active {
+  background: #fff;
+  color: #050505;
+  padding-left: 30px;
+}
+
+.price-row-v2.is-active::before,
+.price-row-v2.is-preview::before {
+  opacity: 1;
+}
+
+.price-row-v2.is-active .price-row-v2__zone,
+.price-row-v2.is-active b {
+  color: rgba(5,5,5,.62);
+}
+
+.price-row-v2.is-preview:not(.is-active) b,
+.price-row-v2.is-preview:not(.is-active) .price-row-v2__zone {
+  color: rgba(255,255,255,.72);
+}
+
+/* Preview panel */
+.magazine-preview {
+  position: sticky;
+  top: 112px;
+  min-height: 720px;
+  padding: 26px;
+  overflow: hidden;
+}
+
+.magazine-preview__top {
+  display: grid;
+  gap: 10px;
+  position: relative;
+  z-index: 3;
+}
+
+.magazine-preview__top span {
+  width: fit-content;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(229,57,53,.16);
+  color: #ff817d;
+  border: 1px solid rgba(229,57,53,.34);
+  font: 600 10px/1 "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.magazine-preview__top h3 {
+  margin: 0;
+  max-width: 520px;
+  color: #fff;
+  font-size: clamp(34px, 4.2vw, 58px);
+  line-height: .92;
+  letter-spacing: -.07em;
+}
+
+.magazine-preview__top b {
+  color: #fff;
+  font: 500 17px/1 "IBM Plex Mono", monospace;
+}
+
+.magazine-stage {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  padding: 24px 0 18px;
+  perspective: 1200px;
+}
+
+.magazine-closed,
+.magazine-open {
+  grid-area: 1 / 1;
+  transition:
+    opacity .30s ease,
+    transform .30s ease,
+    visibility .30s ease;
+}
+
+.magazine-closed {
+  position: relative;
+  width: min(440px, 100%);
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateX(58deg) rotateZ(-14deg);
+}
+
+.mag-cover,
+.mag-gatefold {
+  position: absolute;
+  border-radius: 18px;
+  background: #efefef;
+  border: 1px solid rgba(0,0,0,.16);
+  box-shadow: 0 24px 46px rgba(0,0,0,.24);
+  overflow: hidden;
+}
+
+.mag-cover::after,
+.mag-gatefold::after,
+.mag-page::after,
+.mag-insert-sheet::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #E53935;
+  opacity: 0;
+  transition:
+    opacity .30s ease,
+    transform .30s ease;
+}
+
+.mag-cover--front {
+  left: 96px;
+  top: 34px;
+  width: 220px;
+  height: 260px;
+  transform: rotateZ(8deg) skewY(-8deg);
+  background:
+    linear-gradient(145deg, #fff 0 35%, #f1f1f1 35% 100%);
+  z-index: 3;
+}
+
+.mag-cover--back {
+  left: 126px;
+  top: 54px;
+  width: 220px;
+  height: 260px;
+  transform: rotateZ(8deg) skewY(-8deg) translateZ(-14px);
+  background: #d9d9d9;
+  z-index: 1;
+}
+
+.mag-cover span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  padding: 24px;
+  color: #111;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: .9;
+  letter-spacing: -.05em;
+}
+
+.mag-gatefold {
+  width: 142px;
+  height: 250px;
+  top: 42px;
+  background: #f8f8f8;
+  z-index: 4;
+  opacity: 0;
+}
+
+.mag-gatefold--left {
+  left: 12px;
+  transform-origin: right center;
+  transform: rotateZ(8deg) skewY(-8deg) rotateY(-72deg);
+}
+
+.mag-gatefold--right {
+  right: 18px;
+  transform-origin: left center;
+  transform: rotateZ(8deg) skewY(-8deg) rotateY(72deg);
+}
+
+.magazine-open {
+  position: relative;
+  width: min(560px, 100%);
+  aspect-ratio: 1.52 / 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  filter: drop-shadow(0 26px 34px rgba(0,0,0,.34));
+  transform-style: preserve-3d;
+  transform: rotateX(11deg);
+}
+
+.mag-page {
+  position: relative;
+  min-height: 310px;
+  padding: 24px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.08), transparent 12%),
+    #f7f3ea;
+  color: #111;
+  border: 1px solid rgba(0,0,0,.15);
+  box-shadow: inset 0 -14px 0 rgba(0,0,0,.035);
+}
+
+.mag-page--left {
+  border-radius: 20px 0 0 20px;
+  transform-origin: right center;
+}
+
+.mag-page--right {
+  border-radius: 0 20px 20px 0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.16), transparent 12%),
+    #fbf8f0;
+  transform-origin: left center;
+}
+
+.mag-page__eyebrow {
+  font: 500 10px/1 "IBM Plex Mono", monospace;
+  color: rgba(17,17,17,.48);
+  text-transform: lowercase;
+}
+
+.mag-page i {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  font-style: normal;
+  font-size: 40px;
+  letter-spacing: -.07em;
+  color: rgba(17,17,17,.20);
+}
+
+.mag-editor-column {
+  position: absolute;
+  left: 24px;
+  top: 66px;
+  bottom: 54px;
+  width: 42%;
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, rgba(17,17,17,.20), rgba(17,17,17,.05)),
+    repeating-linear-gradient(0deg, rgba(17,17,17,.26) 0 2px, transparent 2px 14px);
+  opacity: .36;
+}
+
+.mag-visual-block {
+  position: absolute;
+  left: 28px;
+  top: 70px;
+  width: 46%;
+  height: 118px;
+  border-radius: 16px;
+  background: rgba(17,17,17,.14);
+}
+
+.mag-content-lines {
+  position: absolute;
+  right: 24px;
+  top: 72px;
+  width: 40%;
+  bottom: 62px;
+  background: repeating-linear-gradient(0deg, rgba(17,17,17,.24) 0 2px, transparent 2px 13px);
+  opacity: .36;
+}
+
+.mag-content-lines--short {
+  top: 214px;
+  left: 28px;
+  right: 28px;
+  width: auto;
+  bottom: 62px;
+}
+
+.mag-insert-sheet {
+  position: absolute;
+  left: 50%;
+  top: 11%;
+  width: 30%;
+  height: 78%;
+  border-radius: 14px;
+  transform: translateX(-50%) translateY(18px) rotate(-6deg);
+  background: #fafafa;
+  border: 1px solid rgba(0,0,0,.16);
+  box-shadow: 0 24px 44px rgba(0,0,0,.28);
+  opacity: 0;
+  z-index: 8;
+  transition:
+    opacity .30s ease,
+    transform .30s ease;
+}
+
+.mag-insert-sheet span {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  height: 100%;
+  color: #fff;
+  font: 700 12px/1 "IBM Plex Mono", monospace;
+  text-transform: uppercase;
+}
+
+.magazine-preview[data-state="closed"] .magazine-open,
+.magazine-preview[data-state="gatefold"] .magazine-open {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateX(11deg) translateY(16px) scale(.98);
+}
+
+.magazine-preview[data-state="open"] .magazine-closed,
+.magazine-preview[data-state="insert"] .magazine-closed {
+  opacity: 0;
+  visibility: hidden;
+  transform: rotateX(58deg) rotateZ(-14deg) translateY(18px) scale(.98);
+}
+
+.magazine-preview[data-state="gatefold"] .mag-gatefold {
+  opacity: 1;
+}
+
+.magazine-preview[data-state="gatefold"] .mag-gatefold--left {
+  transform: rotateZ(8deg) skewY(-8deg) rotateY(-20deg);
+}
+
+.magazine-preview[data-state="gatefold"] .mag-gatefold--right {
+  transform: rotateZ(8deg) skewY(-8deg) rotateY(20deg);
+}
+
+/* Red zones */
+.magazine-preview[data-zone="cover-front"] .mag-cover--front::after,
+.magazine-preview[data-zone="cover-back"] .mag-cover--back::after {
+  opacity: .92;
+}
+
+.magazine-preview[data-zone="gatefold"] .mag-gatefold::after {
+  opacity: .92;
+}
+
+.magazine-preview[data-zone="cover-inside-front"] .mag-page--left::after,
+.magazine-preview[data-zone="cover-inside-back"] .mag-page--right::after,
+.magazine-preview[data-zone="contents"] .mag-page--left::after,
+.magazine-preview[data-zone="editor-letter"] .mag-page--left::after,
+.magazine-preview[data-zone="inner-page"] .mag-page--right::after {
+  inset: 42px 24px 50px;
+  border-radius: 16px;
+  opacity: .92;
+}
+
+.magazine-preview[data-zone="first-spread"] .mag-page::after,
+.magazine-preview[data-zone="second-spread"] .mag-page::after,
+.magazine-preview[data-zone="third-spread"] .mag-page::after,
+.magazine-preview[data-zone="premium-spread"] .mag-page::after,
+.magazine-preview[data-zone="inner-spread"] .mag-page::after,
+.magazine-preview[data-zone="special"] .mag-page::after {
+  inset: 34px 20px 42px;
+  border-radius: 16px;
+  opacity: .88;
+}
+
+.magazine-preview[data-zone="contents"] .mag-page--left::after {
+  inset: 34px 22px auto 22px;
+  height: 44%;
+}
+
+.magazine-preview[data-zone="editor-letter"] .mag-page--left::after {
+  inset: 58px auto 48px 22px;
+  width: 42%;
+}
+
+.magazine-preview[data-zone="insert"] .mag-insert-sheet {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0) rotate(-6deg);
+}
+
+.magazine-preview[data-zone="insert"] .mag-insert-sheet::after {
+  opacity: .92;
+}
+
+.magazine-preview__caption {
+  position: relative;
+  z-index: 4;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.magazine-preview__caption p {
+  margin: 0 0 14px;
+  color: rgba(255,255,255,.82);
+  line-height: 1.48;
+  font-size: 16px;
+}
+
+.magazine-preview__caption ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.magazine-preview__caption li {
+  position: relative;
+  padding-left: 18px;
+  color: rgba(255,255,255,.64);
+  line-height: 1.35;
+  font-size: 14px;
+}
+
+.magazine-preview__caption li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .55em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #E53935;
+}
+
+@media (max-width: 1080px) {
+  .price-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .magazine-preview {
+    position: sticky;
+    bottom: 14px;
+    top: auto;
+    z-index: 30;
+    min-height: auto;
+  }
+
+  .magazine-stage {
+    min-height: 320px;
+  }
+}
+
+@media (max-width: 700px) {
+  .home-price--premium {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .price-row-v2 {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "zone"
+      "price";
+    gap: 6px;
+  }
+
+  .price-row-v2 b {
+    justify-self: start;
+  }
+
+  .magazine-preview {
+    padding: 18px;
+    border-radius: 24px;
+  }
+
+  .magazine-stage {
+    min-height: 260px;
+    padding: 12px 0;
+  }
+
+  .magazine-open {
+    width: 100%;
+  }
+
+  .mag-page {
+    min-height: 230px;
+    padding: 18px;
+  }
+
+  .magazine-closed {
+    width: 300px;
+    height: 230px;
+  }
+
+  .mag-cover--front,
+  .mag-cover--back {
+    width: 156px;
+    height: 190px;
+  }
+
+  .mag-cover--front {
+    left: 68px;
+  }
+
+  .mag-cover--back {
+    left: 88px;
+  }
+
+  .mag-gatefold {
+    width: 96px;
+    height: 182px;
+  }
+}
