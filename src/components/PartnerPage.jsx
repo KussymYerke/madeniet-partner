@@ -30,6 +30,191 @@ function SectionHead({ kicker, title, lead, light = false }) {
   );
 }
 
+
+const PARTNER_PRICE_POSITIONS = [
+  {
+    id: "gatefold-na-oblozhke",
+    titleRu: "Гейтфолд на обложке",
+    titleKz: "Мұқабадағы гейтфолд",
+    price: "1,850,000 тг",
+    image: "/assets/price-board/card1.png",
+    detailRu: "Раскрывающаяся обложка с дополнительной створкой. Самый эффектный print-формат для запуска, громкой кампании или имиджевого вау-эффекта.",
+    detailKz: "Қосымша ашылатын створкасы бар мұқаба. Іске қосу, ірі кампания немесе имидждік wow-әсер үшін ең әсерлі print-формат.",
+    bulletsRu: ["расширенная площадь на обложке", "эффект раскрытия и вау-подача", "лучше всего для flagship-кампаний"],
+    bulletsKz: ["мұқабадағы кеңейтілген аумақ", "ашылу эффектісі және wow-подача", "flagship-кампаниялар үшін ең тиімді"]
+  },
+  {
+    id: "pervyj-razvorot",
+    titleRu: "Первый разворот",
+    titleKz: "Алғашқы разворот",
+    price: "1,500,000 тг",
+    image: "/assets/price-board/card2.png",
+    detailRu: "Первый разворот сразу после обложки. Дает максимальный ранний контакт с читателем и много места для визуала, продукта и сообщения бренда.",
+    detailKz: "Мұқабадан кейінгі алғашқы разворот. Оқырманмен ерте контакт береді және визуал, өнім мен бренд хабарламасына көп орын ашады.",
+    bulletsRu: ["2 полные страницы рядом", "самая ранняя заметная позиция внутри номера", "подходит для ключевого партнера выпуска"],
+    bulletsKz: ["қатар тұрған 2 толық бет", "нөмір ішіндегі ең ерте көрінетін позиция", "шығарылымның негізгі серіктесіне ыңғайлы"]
+  },
+  {
+    id: "tretya-oblozhka",
+    titleRu: "Третья обложка",
+    titleKz: "Үшінші мұқаба",
+    price: "1,400,000 тг",
+    image: "/assets/price-board/card3.png",
+    detailRu: "Внутренняя сторона задней обложки. Премиальная финальная позиция: читатель видит ее перед тем, как закрыть журнал.",
+    detailKz: "Артқы мұқабаның ішкі жағы. Оқырман журналды жабар алдында көретін премиум финалдық позиция.",
+    bulletsRu: ["внутренняя часть задней обложки", "премиальная финальная точка контакта", "справа в превью нет лишней пустой страницы"],
+    bulletsKz: ["артқы мұқабаның ішкі бөлігі", "контакттың премиум финалдық нүктесі", "preview ішінде оң жақта бос бет жоқ"]
+  },
+  {
+    id: "chetvertaya-oblozhka",
+    titleRu: "Четвертая обложка",
+    titleKz: "Төртінші мұқаба",
+    price: "1,700,000 тг",
+    image: "/assets/price-board/card4.png",
+    detailRu: "Задняя внешняя обложка журнала. Это полноценная наружная поверхность, которая читается как самостоятельный бренд-постер.",
+    detailKz: "Журналдың артқы сыртқы мұқабасы. Бұл жеке бренд-постер сияқты қабылданатын толық сыртқы бет.",
+    bulletsRu: ["наружная задняя обложка", "видна как до, так и после чтения", "сильный standalone-формат"],
+    bulletsKz: ["сыртқы артқы мұқаба", "оқуға дейін де, кейін де көрінеді", "күшті standalone-формат"]
+  },
+  {
+    id: "insert",
+    titleRu: "Инсерт",
+    titleKz: "Қосымша парақ",
+    price: "500,000 тг",
+    image: "/assets/price-board/card5.png",
+    detailRu: "Отдельный вложенный лист между страницами журнала: купон, invitation, меню, промо-карта, мини-постер или QR-носитель.",
+    detailKz: "Журнал беттерінің арасына салынатын жеке парақ: купон, invitation, меню, промо-карта, мини-постер немесе QR-тасығыш.",
+    bulletsRu: ["отдельный физический носитель внутри номера", "можно вынуть, сохранить или использовать", "идеально для промо, invite, QR или collectible"],
+    bulletsKz: ["нөмір ішіндегі жеке physical тасымалдағыш", "алып, сақтап немесе қолдануға болады", "promo, invite, QR немесе collectible үшін ыңғайлы"]
+  },
+  {
+    id: "inside-single-combo",
+    titleRu: "Внутренняя полоса / Письмо редактора / Содержание",
+    titleKz: "Ішкі бет / Редактор хаты / Мазмұн",
+    price: "350,000 тг",
+    image: "/assets/price-board/card6.png",
+    detailRu: "Компактные одиночные позиции внутри номера: внутренняя полоса, страница рядом с письмом редактора или размещение возле содержания / выходных данных.",
+    detailKz: "Нөмір ішіндегі ықшам бірлік позициялар: ішкі бет, редактор хаты жанындағы бет немесе мазмұн / шығу деректері маңындағы орналастыру.",
+    bulletsRu: ["одностраничный формат", "подходит для аккуратного имиджевого присутствия", "варианты: внутренняя полоса, письмо редактора, содержание"],
+    bulletsKz: ["бір беттік формат", "ұқыпты имидждік қатысуға ыңғайлы", "нұсқалар: ішкі бет, редактор хаты, мазмұн"]
+  },
+  {
+    id: "second-third-spread",
+    titleRu: "Третий разворот / Второй разворот",
+    titleKz: "Үшінші разворот / Екінші разворот",
+    price: "950,000 тг",
+    image: "/assets/price-board/card7.png",
+    detailRu: "Ранние развороты в начале выпуска. Отличный баланс заметности и стоимости для брендов, которым нужна сильная видимость без обложечной цены.",
+    detailKz: "Шығарылым басындағы ерте развороттар. Мұқаба бағасынсыз-ақ жоғары көрінім қажет брендтер үшін жақсы баланс.",
+    bulletsRu: ["2 страницы рядом", "ранняя часть читательского пути", "варианты: второй или третий разворот"],
+    bulletsKz: ["қатар тұрған 2 бет", "оқырман жолының ерте бөлігі", "нұсқалар: екінші немесе үшінші разворот"]
+  },
+  {
+    id: "inner-premium-spread",
+    titleRu: "Внутренний разворот / Премиальный разворот",
+    titleKz: "Ішкі разворот / Премиалды разворот",
+    price: "600,000 тг",
+    image: "/assets/price-board/card8.png",
+    detailRu: "Развороты внутри блока номера: классический внутренний или более премиальный в первой трети журнала. Хорошо подходят для полноценной истории бренда.",
+    detailKz: "Нөмір блогының ішіндегі развороттар: классикалық ішкі немесе журналдың алғашқы үштен біріндегі премиалды формат. Бренд тарихын толық ашуға ыңғайлы.",
+    bulletsRu: ["2 полные страницы", "пространство для фото, текста и storytelling", "варианты: внутренний или премиальный разворот"],
+    bulletsKz: ["2 толық бет", "фото, мәтін және storytelling үшін орын", "нұсқалар: ішкі немесе премиалды разворот"]
+  },
+  {
+    id: "slozhnyj-razvorot-1",
+    titleRu: "Сложный разворот 1",
+    titleKz: "Күрделі разворот 1",
+    price: "1,000,000 тг",
+    image: "/assets/price-board/card9.png",
+    detailRu: "Симметричный fold-out-разворот с раскрывающимися створками. Формат дает расширенную площадь для большой кампании, съёмки или визуальной истории.",
+    detailKz: "Симметриялы fold-out-разворот, екі жаққа ашылатын створкалармен. Үлкен кампания, түсірілім немесе визуалды хикая үшін кең аумақ береді.",
+    bulletsRu: ["многоступенчатое раскрытие", "расширенная площадь макета", "вариант раскрытия: сторона 1"],
+    bulletsKz: ["көп сатылы ашылу", "макетке арналған кеңейтілген аумақ", "ашылу нұсқасы: 1-жағы"]
+  },
+  {
+    id: "slozhnyj-razvorot-2",
+    titleRu: "Сложный разворот 2",
+    titleKz: "Күрделі разворот 2",
+    price: "1,000,000 тг",
+    image: "/assets/price-board/card10.png",
+    detailRu: "Вторая фаза сложного симметричного fold-out-разворота. Позволяет показать продолжение большой визуальной композиции или вторую часть истории.",
+    detailKz: "Күрделі симметриялы fold-out-развороттың екінші фазасы. Үлкен визуалды композицияның жалғасын немесе оқиғаның екінші бөлігін көрсетуге мүмкіндік береді.",
+    bulletsRu: ["вторая конфигурация сложного разворота", "хорошо подходит для продолжения композиции", "вариант раскрытия: сторона 2"],
+    bulletsKz: ["күрделі развороттың екінші конфигурациясы", "композиция жалғасына өте ыңғайлы", "ашылу нұсқасы: 2-жағы"]
+  }
+];
+
+
+function PartnerPricePhotoBoard({ lang }) {
+  const [selectedId, setSelectedId] = useState("gatefold-na-oblozhke");
+  const [hoveredId, setHoveredId] = useState(null);
+  const previewId = hoveredId || selectedId;
+  const current = PARTNER_PRICE_POSITIONS.find((item) => item.id === previewId) || PARTNER_PRICE_POSITIONS[0];
+
+  const localize = (item) => ({
+    title: lang === "kz" ? item.titleKz : item.titleRu,
+    detail: lang === "kz" ? item.detailKz : item.detailRu,
+    bullets: lang === "kz" ? item.bulletsKz : item.bulletsRu,
+  });
+
+  const localized = localize(current);
+  const badge = hoveredId
+    ? lang === "kz" ? "қарап жатырсыз" : "предпросмотр"
+    : lang === "kz" ? "таңдалды" : "выбрано";
+
+  return (
+    <div className="price-shell pp-photo-price-shell">
+      <div className="price-visual-grid" aria-label="Madeniet print price list">
+        {PARTNER_PRICE_POSITIONS.map((item) => {
+          const itemTitle = localize(item).title;
+          const active = item.id === selectedId;
+          const preview = item.id === previewId;
+
+          return (
+            <button
+              className={`price-photo-card${active ? " is-active" : ""}${preview ? " is-preview" : ""}`}
+              type="button"
+              data-price-id={item.id}
+              key={item.id}
+              onMouseEnter={() => setHoveredId(item.id)}
+              onMouseLeave={() => setHoveredId(null)}
+              onFocus={() => setHoveredId(item.id)}
+              onBlur={() => setHoveredId(null)}
+              onClick={() => {
+                setSelectedId(item.id);
+                setHoveredId(null);
+              }}
+            >
+              <img src={item.image} alt={itemTitle} loading="lazy" />
+            </button>
+          );
+        })}
+      </div>
+
+      <aside className="price-photo-detail" data-price-id={current.id}>
+        <div className="magazine-preview__top">
+          <span>{badge}</span>
+          <h3>{localized.title}</h3>
+          <b>{current.price}</b>
+        </div>
+
+        <div className="price-photo-detail__stage">
+          <img src={current.image} alt={localized.title} />
+        </div>
+
+        <div className="magazine-preview__caption">
+          <p>{localized.detail}</p>
+          <ul>
+            {localized.bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        </div>
+      </aside>
+    </div>
+  );
+}
+
 export default function PartnerPage({ page }) {
   const [lang, setLang] = useState(() => localStorage.getItem("madeniet-lang") || "ru");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -185,25 +370,19 @@ export default function PartnerPage({ page }) {
             <figcaption>{t.concept.caption}</figcaption>
           </figure>
         </section>
-
         {t.moodboard && (
-          <section id="moodboard" className="pp-section pp-moodboard">
+          <section
+            id="moodboard"
+            className="pp-section pp-moodboard pp-moodboard--pinterest pp-moodboard--hyundai"
+            style={{ "--hyundai-mood-bg": `url(${page.images.hero})` }}
+          >
             <SectionHead kicker={t.moodboard.kicker} title={t.moodboard.title} lead={t.moodboard.lead} />
-            <div className="pp-moodboard-grid">
+            <div className="home-mood-grid home-mood-grid--balanced home-mood-grid--uniform pp-hyundai-pinterest-grid">
               {t.moodboard.items.map((item, index) => (
-                <article key={item.title}>
-                  <div className={`pp-mood-card pp-mood-card--${item.variant || "clean"}`}>
-                    {item.image ? (
-                      <img src={item.image} alt={item.alt || item.title} />
-                    ) : (
-                      <div className="pp-mood-card__fallback" aria-hidden="true">
-                        <span>{item.tag}</span>
-                        <b>{numberLabel(index)}</b>
-                      </div>
-                    )}
-                  </div>
-                  <div className="pp-moodboard-copy">
-                    <span>{item.tag}</span>
+                <article className="home-mood-card" key={item.title}>
+                  <img src={item.image} alt={item.alt || item.title} />
+                  <div className="home-mood-card__meta">
+                    <span>{item.tag || numberLabel(index)}</span>
                     <h3>{item.title}</h3>
                     <p>{item.text}</p>
                   </div>
@@ -300,17 +479,12 @@ export default function PartnerPage({ page }) {
         </section>
 
         {t.price && (
-          <section id="price" className="pp-section pp-price-list">
+          <section id="price" className="pp-section pp-price-list pp-price-list--reference">
             <SectionHead kicker={t.price.kicker} title={t.price.title} lead={t.price.lead} />
-            <div className="pp-price-grid">
-              {t.price.items.map((item) => (
-                <article key={item.title} className={item.featured ? "pp-price--featured" : ""}>
-                  <span>{item.label}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                  <b>{item.price}</b>
-                </article>
-              ))}
+            <div className="price-reference-wrap pp-price-reference-wrap">
+              <figure className="price-reference-card">
+                <img src="/assets/price-board/price-reference-board.jpg" alt="Рекламные позиции журнала Madeniet" loading="lazy" />
+              </figure>
             </div>
           </section>
         )}

@@ -7349,3 +7349,318 @@ body {
     height: 182px;
   }
 }
+
+
+/* --- price section photo board refresh --- */
+.price-shell {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(320px, 0.82fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.price-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.price-photo-card {
+  appearance: none;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 0;
+  background: linear-gradient(180deg, rgba(22,22,24,0.98), rgba(10,10,12,0.98));
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease, opacity .25s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,.22);
+}
+
+.price-photo-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.price-photo-card:hover,
+.price-photo-card.is-preview {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,.48);
+  box-shadow: 0 18px 36px rgba(0,0,0,.36);
+}
+
+.price-photo-card.is-active {
+  border-color: rgba(255,255,255,.92);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.16), 0 22px 44px rgba(0,0,0,.42);
+}
+
+.price-photo-detail {
+  position: sticky;
+  top: 104px;
+  border: 1px solid rgba(255,255,255,0.16);
+  border-radius: 28px;
+  background: rgba(14,14,16,.96);
+  padding: 24px;
+}
+
+.price-photo-detail__stage {
+  border-radius: 20px;
+  overflow: hidden;
+  background: #09090a;
+  border: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 18px;
+}
+
+.price-photo-detail__stage img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.price-photo-detail .magazine-preview__caption {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.price-photo-detail .magazine-preview__caption ul {
+  margin-top: 14px;
+}
+
+@media (max-width: 1100px) {
+  .price-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .price-photo-detail {
+    position: static;
+  }
+}
+
+@media (max-width: 820px) {
+  .price-visual-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .price-visual-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .price-photo-detail {
+    padding: 18px;
+    border-radius: 22px;
+  }
+}
+
+/* final polish for generated price photos */
+.price-photo-card img,.price-photo-detail__stage img{display:block;width:100%;height:auto;}
+.pp-price-list--photo{background:#050505!important;color:#fff!important;width:100%!important;max-width:none!important;margin:0!important;padding-left:max(20px,calc((100vw - 1180px)/2))!important;padding-right:max(20px,calc((100vw - 1180px)/2))!important}.pp-price-list--photo .pp-section-head h2,.pp-price-list--photo .pp-section-head .pp-kicker{color:#fff!important}.pp-price-list--photo .pp-section-head>p:not(.pp-kicker){color:rgba(255,255,255,.66)!important}.pp-photo-price-shell{margin-top:34px}
+
+/* === static price reference image block === */
+.price-reference-wrap {
+  width: 100%;
+  margin-top: 28px;
+}
+
+.price-reference-card {
+  margin: 0;
+  width: 100%;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #111;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 28px 90px rgba(0,0,0,.32);
+}
+
+.price-reference-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.pp-price-list--reference {
+  background: #050505 !important;
+  color: #fff !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding-left: max(20px, calc((100vw - 1180px) / 2)) !important;
+  padding-right: max(20px, calc((100vw - 1180px) / 2)) !important;
+  border-top: 0 !important;
+}
+
+.pp-price-list--reference .pp-section-head h2,
+.pp-price-list--reference .pp-section-head .pp-kicker {
+  color: #fff !important;
+}
+
+.pp-price-list--reference .pp-section-head > p:not(.pp-kicker) {
+  color: rgba(255,255,255,.66) !important;
+}
+
+.pp-price-reference-wrap {
+  max-width: 1180px;
+}
+
+@media (max-width: 700px) {
+  .price-reference-card {
+    border-radius: 18px;
+  }
+
+  .price-reference-wrap {
+    margin-top: 18px;
+  }
+}
+
+
+/* === Hyundai Pinterest moodboard from home page === */
+.pp-moodboard--pinterest.pp-moodboard--hyundai {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(0, 44, 95, 0.96), rgba(3, 14, 28, 0.98)),
+    #002C5F;
+  color: #fff;
+}
+
+.pp-moodboard--pinterest.pp-moodboard--hyundai::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hyundai-mood-bg);
+  background-size: cover;
+  background-position: center;
+  opacity: .18;
+  filter: grayscale(.15) contrast(1.08);
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+.pp-moodboard--pinterest.pp-moodboard--hyundai::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 8%, rgba(255,255,255,.18), transparent 32%),
+    radial-gradient(circle at 85% 12%, rgba(0, 118, 255, .20), transparent 35%),
+    linear-gradient(180deg, rgba(0,0,0,.06), rgba(0,0,0,.38));
+  pointer-events: none;
+}
+
+.pp-moodboard--pinterest.pp-moodboard--hyundai > * {
+  position: relative;
+  z-index: 2;
+}
+
+.pp-moodboard--pinterest.pp-moodboard--hyundai .pp-section-head h2,
+.pp-moodboard--pinterest.pp-moodboard--hyundai .pp-kicker {
+  color: #fff !important;
+}
+
+.pp-moodboard--pinterest.pp-moodboard--hyundai .pp-section-head > p:not(.pp-kicker) {
+  color: rgba(255,255,255,.72) !important;
+}
+
+.pp-hyundai-pinterest-grid,
+.pp-moodboard--pinterest .home-mood-grid--uniform {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 18px !important;
+  align-items: stretch !important;
+  margin-top: 42px;
+}
+
+.pp-moodboard--pinterest .home-mood-card {
+  height: 100%;
+  display: grid !important;
+  grid-template-rows: auto 1fr;
+  min-height: 0;
+  border-radius: 30px;
+  overflow: hidden;
+  background: rgba(255,255,255,.92);
+  border: 1px solid rgba(255,255,255,.24);
+  box-shadow: 0 26px 80px rgba(0,0,0,.28);
+  transition: transform .28s ease, box-shadow .28s ease, border-color .28s ease;
+}
+
+.pp-moodboard--pinterest .home-mood-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  background: #ece8df;
+  transition: transform .45s ease, filter .35s ease;
+}
+
+.pp-moodboard--pinterest .home-mood-card__meta {
+  min-height: 190px;
+  display: grid;
+  grid-template-rows: auto auto 1fr;
+  gap: 10px;
+  padding: 18px 20px 22px;
+}
+
+.pp-moodboard--pinterest .home-mood-card__meta span {
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0,44,95,.08);
+  border: 1px solid rgba(0,44,95,.10);
+  color: rgba(0,44,95,.75);
+  font: 600 11px/1 "IBM Plex Mono", monospace;
+}
+
+.pp-moodboard--pinterest .home-mood-card__meta h3 {
+  margin: 0;
+  color: #111;
+  font-size: clamp(21px, 1.8vw, 26px);
+  line-height: 1.03;
+  letter-spacing: -.035em;
+}
+
+.pp-moodboard--pinterest .home-mood-card__meta p {
+  margin: 0;
+  color: #424242;
+  line-height: 1.45;
+  font-size: 16px;
+}
+
+.pp-moodboard--pinterest .home-mood-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(255,255,255,.42);
+  box-shadow: 0 34px 100px rgba(0,0,0,.34);
+}
+
+.pp-moodboard--pinterest .home-mood-card:hover img {
+  transform: scale(1.035);
+  filter: saturate(1.05) contrast(1.04);
+}
+
+.pp-moodboard--pinterest .pp-moodboard-note {
+  margin-top: 24px;
+  color: rgba(255,255,255,.70);
+  border-color: rgba(255,255,255,.22);
+  background: rgba(255,255,255,.06);
+}
+
+@media (max-width: 1100px) {
+  .pp-hyundai-pinterest-grid,
+  .pp-moodboard--pinterest .home-mood-grid--uniform {
+    grid-template-columns: repeat(2, minmax(0,1fr)) !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .pp-hyundai-pinterest-grid,
+  .pp-moodboard--pinterest .home-mood-grid--uniform {
+    grid-template-columns: 1fr !important;
+  }
+
+  .pp-moodboard--pinterest .home-mood-card__meta {
+    min-height: auto;
+  }
+}

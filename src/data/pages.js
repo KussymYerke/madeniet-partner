@@ -246,56 +246,10 @@ export const partnersHtml = `
         <p data-i18n="priceLead">Интерактивный прайс: наведите на строку для временного превью или кликните, чтобы зафиксировать выбранную позицию.</p>
       </div>
 
-      <div class="price-shell" data-price-component>
-        <div class="price-list-panel">
-          <div class="price-list-panel__top">
-            <span>MADENIET PRICE</span>
-            <b>Print</b>
-          </div>
-          <div class="price-table-v2" data-price-list aria-label="Madeniet print price list"></div>
-        </div>
-
-        <aside class="magazine-preview" data-magazine-preview data-state="open" data-zone="inner">
-          <div class="magazine-preview__top">
-            <span id="price-selected-badge">выбрано</span>
-            <h3 id="price-selected-title">Внутренняя полоса</h3>
-            <b id="price-selected-value">300 000 ₸</b>
-          </div>
-
-          <div class="magazine-stage" aria-label="Magazine advertising position preview">
-            <div class="magazine-closed" aria-hidden="true">
-              <div class="mag-cover mag-cover--front"><span>madeniet</span></div>
-              <div class="mag-cover mag-cover--back"><span>back cover</span></div>
-              <div class="mag-gatefold mag-gatefold--left"></div>
-              <div class="mag-gatefold mag-gatefold--right"></div>
-            </div>
-
-            <div class="magazine-open" aria-hidden="true">
-              <div class="mag-page mag-page--left">
-                <span class="mag-page__eyebrow">madeniet</span>
-                <div class="mag-editor-column"></div>
-                <div class="mag-content-lines"></div>
-                <i>12</i>
-              </div>
-              <div class="mag-page mag-page--right">
-                <span class="mag-page__eyebrow">culture story</span>
-                <div class="mag-visual-block"></div>
-                <div class="mag-content-lines mag-content-lines--short"></div>
-                <i>13</i>
-              </div>
-              <div class="mag-insert-sheet"><span>insert</span></div>
-            </div>
-          </div>
-
-          <div class="magazine-preview__caption">
-            <p id="price-selected-detail">Одна рекламная страница внутри журнала. Подходит для аккуратного имиджевого макета, визуального объявления или короткого бренд-сообщения.</p>
-            <ul id="price-selected-list">
-              <li>1 полоса внутри номера</li>
-              <li>адаптация макета под стиль журнала</li>
-              <li>подходит для QR, промокода или имиджевого сообщения</li>
-            </ul>
-          </div>
-        </aside>
+      <div class="price-reference-wrap">
+        <figure class="price-reference-card">
+          <img src="/assets/price-board/price-reference-board.jpg" alt="Рекламные позиции журнала Madeniet" loading="lazy" />
+        </figure>
       </div>
     </section>
 
