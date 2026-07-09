@@ -7664,3 +7664,46 @@ body {
     min-height: auto;
   }
 }
+
+
+/* Hyundai distribution section transplanted from home page */
+.pp-distribution .distribution-showcase__tabs button {
+  background: rgba(255,255,255,.78);
+}
+
+.pp-distribution .distribution-showcase__tabs button.is-active,
+.pp-distribution .distribution-showcase__tabs button:hover,
+.pp-distribution .distribution-showcase__tabs button:focus-visible {
+  background: var(--brand-color);
+  color: #fff;
+  border-color: var(--brand-color);
+  outline: none;
+}
+
+.pp-distribution .distribution-showcase__preview {
+  background: rgba(255,255,255,.76);
+  box-shadow: 0 24px 70px rgba(17,17,17,.08);
+}
+
+.pp-distribution .distribution-preview__image {
+  transition: transform .35s ease, opacity .25s ease;
+}
+
+.pp-distribution .distribution-showcase__preview:hover .distribution-preview__image {
+  transform: scale(1.02);
+}
+
+@media (max-width: 900px) {
+  .pp-distribution .distribution-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .pp-distribution .distribution-showcase__preview {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .pp-distribution .distribution-preview__image-wrap {
+    min-height: 320px;
+  }
+}

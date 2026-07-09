@@ -218,9 +218,12 @@ function PartnerPricePhotoBoard({ lang }) {
 export default function PartnerPage({ page }) {
   const [lang, setLang] = useState(() => localStorage.getItem("madeniet-lang") || "ru");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [distributionIndex, setDistributionIndex] = useState(0);
   const progressBarRef = useRef(null);
   const tickingRef = useRef(false);
   const t = useMemo(() => page.content[lang] || page.content.ru, [lang, page]);
+  const distributionItems = t.distribution?.items || [];
+  const currentDistribution = distributionItems[Math.min(distributionIndex, Math.max(0, distributionItems.length - 1))] || null;
 
   useEffect(() => {
     if ("scrollRestoration" in window.history) {
@@ -231,6 +234,10 @@ export default function PartnerPage({ page }) {
   useEffect(() => {
     document.documentElement.lang = lang === "kz" ? "kk" : "ru";
   }, [lang]);
+
+  useEffect(() => {
+    setDistributionIndex(0);
+  }, [lang, page.slug]);
 
   useEffect(() => {
     const updateScrollState = () => {
@@ -461,6 +468,45 @@ export default function PartnerPage({ page }) {
             ))}
           </div>
         </section>
+
+        {t.distribution && currentDistribution && (
+          <section id="distribution" className="pp-section pp-distribution">
+            <SectionHead kicker={t.distribution.kicker} title={t.distribution.title} lead={t.distribution.lead} />
+            <div className="distribution-showcase">
+              <div className="distribution-showcase__tabs" role="tablist" aria-label={t.distribution.title}>
+                {distributionItems.map((item, index) => (
+                  <button
+                    key={`${item.tab}-${index}`}
+                    type="button"
+                    className={index === distributionIndex ? "is-active" : ""}
+                    onMouseEnter={() => setDistributionIndex(index)}
+                    onFocus={() => setDistributionIndex(index)}
+                    onClick={() => setDistributionIndex(index)}
+                    aria-pressed={index === distributionIndex}
+                  >
+                    {item.tab}
+                  </button>
+                ))}
+              </div>
+
+              <div className="distribution-showcase__preview">
+                <div className="distribution-preview__image-wrap">
+                  <img
+                    className="distribution-preview__image"
+                    src={currentDistribution.image}
+                    alt={currentDistribution.alt || currentDistribution.title}
+                    loading="lazy"
+                  />
+                </div>
+                <div className="distribution-preview__content">
+                  <span className="distribution-preview__eyebrow">{t.distribution.eyebrow}</span>
+                  <h3>{currentDistribution.title}</h3>
+                  <p>{currentDistribution.text}</p>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
 
         <section id="formats" className="pp-section pp-formats">
           <SectionHead kicker={t.formats.kicker} title={t.formats.title} lead={t.formats.lead} />
